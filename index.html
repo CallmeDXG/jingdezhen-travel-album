@@ -99,6 +99,22 @@
   #lb .lb-cap { color: #fff; margin-top: 12px; font-size: 14px; text-align: center; }
   #lb .lb-close { position: absolute; top: 16px; right: 20px; color: #fff; font-size: 30px; cursor: pointer; }
   footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
+  /* 旅行总结海报 */
+  .poster-sec { margin-top: 4px; }
+  .poster { background: linear-gradient(135deg, #ffd6a5 0%, #ffb088 55%, #ff9e7d 100%);
+    border-radius: 18px; padding: 24px 20px 22px; color: #5a2e12;
+    box-shadow: 0 10px 28px rgba(255,140,105,.28); position: relative; overflow: hidden; }
+  .poster::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+    background: repeating-linear-gradient(90deg, #fff 0 14px, transparent 14px 30px); opacity: .55; }
+  .poster .pt { text-align: center; font-size: 22px; font-weight: 800; letter-spacing: 1px; margin-bottom: 3px; }
+  .poster .psub { text-align: center; font-size: 13px; opacity: .85; margin-bottom: 18px; }
+  .poster .rows { display: flex; flex-direction: column; gap: 12px; }
+  .poster .row { background: rgba(255,255,255,.94); border-radius: 14px; padding: 13px 15px;
+    display: flex; gap: 12px; align-items: flex-start; }
+  .poster .row .ic2 { font-size: 26px; line-height: 1.2; flex: 0 0 auto; }
+  .poster .row .lab { font-weight: 800; color: var(--clay-d); font-size: 14px; margin-bottom: 3px; }
+  .poster .row .txt { font-size: 13.5px; color: #5a3a22; line-height: 1.62; }
+  .poster .pnote { text-align: center; font-size: 12px; opacity: .82; margin-top: 16px; }
   @media (max-width: 600px) {
     #map { height: 380px; }
     .gal { grid-template-columns: repeat(2, 1fr); }
@@ -120,7 +136,7 @@
 
 <div class="progress">
   <div class="bar"><i style="width:11%"></i></div>
-  <div class="txt">已记录 1/9 天 · 共 10 张照片 · 最后更新 2026-08-16 01:28</div>
+  <div class="txt">已记录 1/9 天 · 共 10 张照片 · 最后更新 2026-08-16 01:32</div>
 </div>
 
 <div class="wrap">
@@ -158,6 +174,11 @@
   <div class="ph-empty" style="border-style:solid;">
     📷 照片每天都在更新中～ 拍完发给我，我就帮你加到对应那一天的格子里。
   </div>
+
+  <section class="poster-sec">
+    <h2><span class="ic">🏆</span>旅行总结 · 我们的景德镇之最</h2>
+    <div class="poster"><div class="pt">✨ 我的景德镇之最 ✨</div><div class="psub">8/15(周六) – 8/23(周日) · 8天7晚</div><div class="rows"><div class="row"><div class="ic2">🎡</div><div><div class="lab">最好玩项目</div><div class="txt">绿西玻璃工作室·烧玻璃 —— 看玻璃在窑里熔合的那一下，Tilly 直接尖叫，太哇塞了！（扎染、江窑画瓷也超爱，并列手工天花板）</div></div></div><div class="row"><div class="ic2">🍡</div><div><div class="lab">最好吃食物</div><div class="txt">油条包麻糍（抚州弄）—— 外脆里糯、甜咸交织，街头小吃里的惊喜王，Tilly 一连吃了俩</div></div></div><div class="row"><div class="ic2">🏡</div><div><div class="lab">最意外发现</div><div class="txt">三宝国际陶艺村 —— 本以为只是看瓷器，结果是个藏在山里、有小溪和一堆奇怪可爱小店的艺术家村子，比博物馆还松弛</div></div></div><div class="row"><div class="ic2">🎁</div><div><div class="lab">我带回家的宝贝</div><div class="txt">自己画的青花瓷 + 扎染布 —— 亲手做的两件，烧好寄到家，比任何买来的纪念品都珍贵</div></div></div></div><div class="pnote">以上为 Tilly 旅行中的当前最爱，行程结束后可换成真实评选 ✏️</div></div>
+  </section>
 </div>
 
 <footer>景德镇亲子游相册 · 由攻略自动生成 · 地图数据 © 高德地图</footer>

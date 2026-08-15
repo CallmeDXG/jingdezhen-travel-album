@@ -182,6 +182,22 @@ TEMPLATE = r"""<!DOCTYPE html>
   #lb .lb-cap { color: #fff; margin-top: 12px; font-size: 14px; text-align: center; }
   #lb .lb-close { position: absolute; top: 16px; right: 20px; color: #fff; font-size: 30px; cursor: pointer; }
   footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
+  /* 旅行总结海报 */
+  .poster-sec { margin-top: 4px; }
+  .poster { background: linear-gradient(135deg, #ffd6a5 0%, #ffb088 55%, #ff9e7d 100%);
+    border-radius: 18px; padding: 24px 20px 22px; color: #5a2e12;
+    box-shadow: 0 10px 28px rgba(255,140,105,.28); position: relative; overflow: hidden; }
+  .poster::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px;
+    background: repeating-linear-gradient(90deg, #fff 0 14px, transparent 14px 30px); opacity: .55; }
+  .poster .pt { text-align: center; font-size: 22px; font-weight: 800; letter-spacing: 1px; margin-bottom: 3px; }
+  .poster .psub { text-align: center; font-size: 13px; opacity: .85; margin-bottom: 18px; }
+  .poster .rows { display: flex; flex-direction: column; gap: 12px; }
+  .poster .row { background: rgba(255,255,255,.94); border-radius: 14px; padding: 13px 15px;
+    display: flex; gap: 12px; align-items: flex-start; }
+  .poster .row .ic2 { font-size: 26px; line-height: 1.2; flex: 0 0 auto; }
+  .poster .row .lab { font-weight: 800; color: var(--clay-d); font-size: 14px; margin-bottom: 3px; }
+  .poster .row .txt { font-size: 13.5px; color: #5a3a22; line-height: 1.62; }
+  .poster .pnote { text-align: center; font-size: 12px; opacity: .82; margin-top: 16px; }
   @media (max-width: 600px) {
     #map { height: 380px; }
     .gal { grid-template-columns: repeat(2, 1fr); }
@@ -241,6 +257,11 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="ph-empty" style="border-style:solid;">
     📷 照片每天都在更新中～ 拍完发给我，我就帮你加到对应那一天的格子里。
   </div>
+
+  <section class="poster-sec">
+    <h2><span class="ic">🏆</span>旅行总结 · 我们的景德镇之最</h2>
+    __SUMMARY__
+  </section>
 </div>
 
 <footer>景德镇亲子游相册 · 由攻略自动生成 · 地图数据 © 高德地图</footer>
@@ -344,6 +365,21 @@ def render_event(ev):
             % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rr_html, gal))
 
 
+def render_summary(s, sub_line=""):
+    if not s:
+        return ""
+    title = s.get("title", "✨ 我的景德镇之最 ✨")
+    rows = ""
+    for it in s.get("items", []):
+        rows += ('<div class="row"><div class="ic2">%s</div><div>'
+                 '<div class="lab">%s</div><div class="txt">%s</div></div></div>'
+                 % (it.get("emoji", ""), it.get("label", ""), it.get("text", "")))
+    note = ('<div class="pnote">%s</div>' % s["note"]) if s.get("note") else ""
+    return ('<div class="poster"><div class="pt">%s</div><div class="psub">%s</div>'
+            '<div class="rows">%s</div>%s</div>'
+            % (title, sub_line, rows, note))
+
+
 def render_day(d):
     events = "".join(render_event(ev) for ev in d["events"])
     emoji = d.get("emoji", "")
@@ -383,6 +419,8 @@ def main():
                         "day": d["d"], "act": ev.get("act", ""), "time": ev.get("time", ""),
                     })
 
+    summary_html = render_summary(data.get("summary", {}), meta.get("dates", ""))
+
     html = (TEMPLATE
             .replace("__TITLE__", meta.get("title", "景德镇亲子游 · 相册"))
             .replace("__SUBTITLE__", meta.get("subtitle", ""))
@@ -392,6 +430,7 @@ def main():
             .replace("__PROGRESSTXT__", progress_txt)
             .replace("__UPDATED__", updated)
             .replace("__DAYS__", "".join(render_day(d) for d in days))
+            .replace("__SUMMARY__", summary_html)
             .replace("__CENTER__", str(mapdata.get("center", [29.26, 117.20])))
             .replace("__ZOOM__", str(mapdata.get("zoom", 11)))
             .replace("__PLACES__", json.dumps(places, ensure_ascii=False))
