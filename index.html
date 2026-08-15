@@ -45,6 +45,17 @@
   .filter-bar button { border: 1px solid var(--line); background: #fff; color: var(--muted);
     padding: 6px 13px; border-radius: 18px; font-size: 13px; cursor: pointer; }
   .filter-bar button.active { background: var(--celadon-d); color: #fff; border-color: var(--celadon-d); }
+  .map-tip { font-size: 13px; color: var(--muted); margin: 8px 2px 0; }
+  .map-tip b { color: var(--clay-d); }
+  /* 地图弹窗相册 */
+  .mp { max-width: 250px; }
+  .mp b { font-size: 14px; color: var(--ink); }
+  .mp .mp-desc { font-size: 12px; color: var(--muted); margin: 5px 0 7px; line-height: 1.55; }
+  .mp .mp-n { font-size: 12.5px; color: var(--clay-d); font-weight: 700; margin: 2px 0 5px; }
+  .mp .mp-gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; max-height: 188px; overflow-y: auto; }
+  .mp .mp-ph { width: 100%; height: 62px; object-fit: cover; border-radius: 7px; cursor: pointer; border: 1px solid #eee; background: #f3efe8; }
+  .mp .mp-ph:active { transform: scale(.96); }
+  .mp .mp-none { font-size: 12px; color: var(--muted); margin-top: 4px; }
   /* day */
   .day { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .day-head { background: linear-gradient(90deg, #fdf6ee, #f7ecdf); padding: 13px 18px;
@@ -109,7 +120,7 @@
 
 <div class="progress">
   <div class="bar"><i style="width:11%"></i></div>
-  <div class="txt">已记录 1/9 天 · 共 10 张照片 · 最后更新 2026-08-16 01:21</div>
+  <div class="txt">已记录 1/9 天 · 共 10 张照片 · 最后更新 2026-08-16 01:28</div>
 </div>
 
 <div class="wrap">
@@ -136,6 +147,7 @@
       <span><i class="dot nature"></i>自然/古镇</span>
       <span><i class="dot base"></i>机场/租车</span>
     </div>
+    <div class="map-tip">💡 <b>点金色圆点</b>可看该地点的照片（灰色圆点表示还没拍到）。每天更新照片后，对应的点会自动变成金色。</div>
   </section>
 
   <section>
@@ -169,15 +181,34 @@ L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=
   maxZoom: 18, attribution: '© 高德地图'
 }).addTo(map);
 
-var places = [{"cat": "hotel", "name": "🏨 麗枫酒店（陶瓷博物馆陶阳里店）", "lat": 29.269, "lng": 117.172, "desc": "已订 · 昌江区瓷都大道1168号\n高级大床房 · 8/15入-8/18离（3晚）\n紧邻陶瓷博物馆"}, {"cat": "hotel", "name": "🏨 景瀚大酒店（陶溪川街区店）", "lat": 29.289, "lng": 117.207, "desc": "已订 · 珠山区广场南路28号\n云端观景大床房 · 8/18入-8/23离（3晚）\n陶溪川文创街区旁"}, {"cat": "base", "name": "罗家机场 / 租车点", "lat": 29.3587, "lng": 117.1908, "desc": "取还车点：8/15 23:30取，8/23 10:00还\n日产轩逸"}, {"cat": "museum", "name": "景德镇陶瓷博物馆", "lat": 29.2799, "lng": 117.1914, "desc": "免费 · 周一闭馆\n青花/颜色釉/历代瓷器"}, {"cat": "museum", "name": "景德镇御窑博物馆", "lat": 29.2866, "lng": 117.2053, "desc": "位于陶阳里内 · 周一闭馆\n建筑极美（红砖拱形）\n联票约53元含陶阳里"}, {"cat": "museum", "name": "景德镇民窑博物馆", "lat": 29.29, "lng": 117.178, "desc": "了解民窑烧造历史\n规模较小，顺路可看"}, {"cat": "museum", "name": "今夕美术馆", "lat": 29.275, "lng": 117.199, "desc": "位于陶溪川文创街区内\n当代艺术展览\n免费参观"}, {"cat": "museum", "name": "江西直升机科技馆", "lat": 29.36, "lng": 117.165, "desc": "直升机展示+科普\n闺女若喜欢机械/飞行器必去"}, {"cat": "shop", "name": "陶溪川文创街区", "lat": 29.2802, "lng": 117.2006, "desc": "美术馆+画廊+文创店铺\n周五六日晚有创意市集\n免费开放"}, {"cat": "shop", "name": "雕塑瓷厂", "lat": 29.285, "lng": 117.207, "desc": "免费 · 巷子原创陶瓷\n适合淘小物件给闺女"}, {"cat": "shop", "name": "陶阳新村夜市", "lat": 29.29, "lng": 117.18, "desc": "夜宵+小摊\n便宜手工小物件"}, {"cat": "shop", "name": "浮梁县新平村瓷宫", "lat": 29.33, "lng": 117.15, "desc": "门票25元\n外形像童话城堡/瓷制宫殿"}, {"cat": "shop", "name": "景德镇古窑民俗博览区", "lat": 29.2833, "lng": 117.1789, "desc": "门票95元\n传统柴窑+拉坯演示"}, {"cat": "shop", "name": "景德镇陶阳里历史文化旅游区", "lat": 29.2866, "lng": 117.2053, "desc": "含御窑博物馆+明清老街\n大片区可逛半天"}, {"cat": "shop", "name": "景德镇市七四O厂", "lat": 29.282, "lng": 117.215, "desc": "老电子工业厂改造\n文艺复古风"}, {"cat": "shop", "name": "东郊学堂", "lat": 29.301, "lng": 117.222, "desc": "老学校改造的文化/艺术空间"}, {"cat": "shop", "name": "丙丁柴窑", "lat": 29.268, "lng": 117.138, "desc": "现代柴窑建筑\n清水混凝土+光影\n摄影圣地"}, {"cat": "shop", "name": "山闾村戏台", "lat": 29.33, "lng": 117.24, "desc": "古戏台建筑\n瑶里方向顺路"}, {"cat": "kids", "name": "小樱青花扎染店", "lat": 29.295, "lng": 117.165, "desc": "扎染DIY 约105元/人\n青花风格 · 提前预约"}, {"cat": "kids", "name": "绿西玻璃工作室", "lat": 29.281, "lng": 117.198, "desc": "烧玻璃（玻璃熔合/fusing）体验\n做小镜子/挂件/小动物"}, {"cat": "kids", "name": "胖师傅写真馆·妆造", "lat": 29.287, "lng": 117.204, "desc": "御窑厂附近\n古风妆造拍摄"}, {"cat": "kids", "name": "江窑·画瓷·陶艺（老厂店）", "lat": 29.288, "lng": 117.181, "desc": "画陶艺专去这家\n拉坯+画青花+上釉"}, {"cat": "kids", "name": "前程漂流", "lat": 29.31, "lng": 117.42, "desc": "夏季玩水好去处\n带替换衣物+防水袋"}, {"cat": "food", "name": "抚州弄", "lat": 29.288, "lng": 117.19, "desc": "本地小吃一条街\n冷粉/牛骨粉/油条包麻糍"}, {"cat": "food", "name": "花香酒酿煮粉", "lat": 29.292, "lng": 117.188, "desc": "早餐/落地第一碗粉\n酒酿风味独特"}, {"cat": "food", "name": "泥上风土自然餐厅", "lat": 29.283, "lng": 117.196, "desc": "本地菜午餐\n环境好 · 可要求微辣"}, {"cat": "food", "name": "一番街烤肉", "lat": 29.284, "lng": 117.202, "desc": "午餐/晚餐烤肉"}, {"cat": "food", "name": "抚州弄大排档", "lat": 29.288, "lng": 117.189, "desc": "夜宵大排档\n热闹接地气"}, {"cat": "nature", "name": "陶源谷·三宝国际陶艺村", "lat": 29.296, "lng": 117.155, "desc": "三宝村正式名\n艺术工作室聚集地\n免费 · 慢逛拍照"}, {"cat": "nature", "name": "瑶里古镇风景区", "lat": 29.35, "lng": 117.55, "desc": "免费 · 距市区约1h车程\n徽派老屋+小桥流水"}, {"cat": "nature", "name": "瑶里景区东埠古街古码头", "lat": 29.365, "lng": 117.555, "desc": "瑶里配套景点\n古代茶叶运输码头"}, {"cat": "nature", "name": "寒溪村", "lat": 29.32, "lng": 117.22, "desc": "免费 · 艺术茶园村\n凉快安静 · 返程顺路"}, {"cat": "nature", "name": "饶州古镇", "lat": 29.01, "lng": 116.7, "desc": "鄱阳县方向\n仿古商业街"}, {"cat": "nature", "name": "鄱阳湖国家湿地公园", "lat": 29.12, "lng": 116.48, "desc": "自驾约1.5h\n湿地生态 · 夏候鸟"}];
+var places = [{"cat": "hotel", "name": "🏨 麗枫酒店（陶瓷博物馆陶阳里店）", "lat": 29.269, "lng": 117.172, "desc": "已订 · 昌江区瓷都大道1168号\n高级大床房 · 8/15入-8/18离（3晚）\n紧邻陶瓷博物馆", "pid": "hotel_lifeng"}, {"cat": "hotel", "name": "🏨 景瀚大酒店（陶溪川街区店）", "lat": 29.289, "lng": 117.207, "desc": "已订 · 珠山区广场南路28号\n云端观景大床房 · 8/18入-8/23离（3晚）\n陶溪川文创街区旁", "pid": "hotel_jinghan"}, {"cat": "base", "name": "罗家机场 / 租车点", "lat": 29.3587, "lng": 117.1908, "desc": "取还车点：8/15 23:30取，8/23 10:00还\n日产轩逸", "pid": "base_airport"}, {"cat": "museum", "name": "景德镇陶瓷博物馆", "lat": 29.2799, "lng": 117.1914, "desc": "免费 · 周一闭馆\n青花/颜色釉/历代瓷器", "pid": "museum_ceramic"}, {"cat": "museum", "name": "景德镇御窑博物馆", "lat": 29.2866, "lng": 117.2053, "desc": "位于陶阳里内 · 周一闭馆\n建筑极美（红砖拱形）\n联票约53元含陶阳里", "pid": "museum_yuyao"}, {"cat": "museum", "name": "景德镇民窑博物馆", "lat": 29.29, "lng": 117.178, "desc": "了解民窑烧造历史\n规模较小，顺路可看", "pid": "museum_minyao"}, {"cat": "museum", "name": "今夕美术馆", "lat": 29.275, "lng": 117.199, "desc": "位于陶溪川文创街区内\n当代艺术展览\n免费参观", "pid": "museum_jinxi"}, {"cat": "museum", "name": "江西直升机科技馆", "lat": 29.36, "lng": 117.165, "desc": "直升机展示+科普\n闺女若喜欢机械/飞行器必去", "pid": "museum_helicopter"}, {"cat": "shop", "name": "陶溪川文创街区", "lat": 29.2802, "lng": 117.2006, "desc": "美术馆+画廊+文创店铺\n周五六日晚有创意市集\n免费开放", "pid": "shop_taoxichuan"}, {"cat": "shop", "name": "雕塑瓷厂", "lat": 29.285, "lng": 117.207, "desc": "免费 · 巷子原创陶瓷\n适合淘小物件给闺女", "pid": "shop_diaosu"}, {"cat": "shop", "name": "陶阳新村夜市", "lat": 29.29, "lng": 117.18, "desc": "夜宵+小摊\n便宜手工小物件", "pid": "shop_fuzhounight"}, {"cat": "shop", "name": "浮梁县新平村瓷宫", "lat": 29.33, "lng": 117.15, "desc": "门票25元\n外形像童话城堡/瓷制宫殿", "pid": "shop_cipalace"}, {"cat": "shop", "name": "景德镇古窑民俗博览区", "lat": 29.2833, "lng": 117.1789, "desc": "门票95元\n传统柴窑+拉坯演示", "pid": "shop_guyao"}, {"cat": "shop", "name": "景德镇陶阳里历史文化旅游区", "lat": 29.2866, "lng": 117.2053, "desc": "含御窑博物馆+明清老街\n大片区可逛半天", "pid": "shop_taoyangli"}, {"cat": "shop", "name": "景德镇市七四O厂", "lat": 29.282, "lng": 117.215, "desc": "老电子工业厂改造\n文艺复古风", "pid": "shop_740"}, {"cat": "shop", "name": "东郊学堂", "lat": 29.301, "lng": 117.222, "desc": "老学校改造的文化/艺术空间", "pid": "shop_dongjiao"}, {"cat": "shop", "name": "丙丁柴窑", "lat": 29.268, "lng": 117.138, "desc": "现代柴窑建筑\n清水混凝土+光影\n摄影圣地", "pid": "shop_bingding"}, {"cat": "shop", "name": "山闾村戏台", "lat": 29.33, "lng": 117.24, "desc": "古戏台建筑\n瑶里方向顺路", "pid": "shop_shanlv"}, {"cat": "kids", "name": "小樱青花扎染店", "lat": 29.295, "lng": 117.165, "desc": "扎染DIY 约105元/人\n青花风格 · 提前预约", "pid": "kids_xiaoying"}, {"cat": "kids", "name": "绿西玻璃工作室", "lat": 29.281, "lng": 117.198, "desc": "烧玻璃（玻璃熔合/fusing）体验\n做小镜子/挂件/小动物", "pid": "kids_lvxi"}, {"cat": "kids", "name": "胖师傅写真馆·妆造", "lat": 29.287, "lng": 117.204, "desc": "御窑厂附近\n古风妆造拍摄", "pid": "kids_pangshifu"}, {"cat": "kids", "name": "江窑·画瓷·陶艺（老厂店）", "lat": 29.288, "lng": 117.181, "desc": "画陶艺专去这家\n拉坯+画青花+上釉", "pid": "kids_jiangyao"}, {"cat": "kids", "name": "前程漂流", "lat": 29.31, "lng": 117.42, "desc": "夏季玩水好去处\n带替换衣物+防水袋", "pid": "kids_qiancheng"}, {"cat": "food", "name": "抚州弄", "lat": 29.288, "lng": 117.19, "desc": "本地小吃一条街\n冷粉/牛骨粉/油条包麻糍", "pid": "food_fuzhou"}, {"cat": "food", "name": "花香酒酿煮粉", "lat": 29.292, "lng": 117.188, "desc": "早餐/落地第一碗粉\n酒酿风味独特", "pid": "food_huaxiang"}, {"cat": "food", "name": "泥上风土自然餐厅", "lat": 29.283, "lng": 117.196, "desc": "本地菜午餐\n环境好 · 可要求微辣", "pid": "food_nishang"}, {"cat": "food", "name": "一番街烤肉", "lat": 29.284, "lng": 117.202, "desc": "午餐/晚餐烤肉", "pid": "food_yifan"}, {"cat": "food", "name": "抚州弄大排档", "lat": 29.288, "lng": 117.189, "desc": "夜宵大排档\n热闹接地气", "pid": "food_fuzhou_dapaidang"}, {"cat": "nature", "name": "陶源谷·三宝国际陶艺村", "lat": 29.296, "lng": 117.155, "desc": "三宝村正式名\n艺术工作室聚集地\n免费 · 慢逛拍照", "pid": "nature_sanbao"}, {"cat": "nature", "name": "瑶里古镇风景区", "lat": 29.35, "lng": 117.55, "desc": "免费 · 距市区约1h车程\n徽派老屋+小桥流水", "pid": "nature_yaoli"}, {"cat": "nature", "name": "瑶里景区东埠古街古码头", "lat": 29.365, "lng": 117.555, "desc": "瑶里配套景点\n古代茶叶运输码头", "pid": "nature_dongbu"}, {"cat": "nature", "name": "寒溪村", "lat": 29.32, "lng": 117.22, "desc": "免费 · 艺术茶园村\n凉快安静 · 返程顺路", "pid": "nature_hanxi"}, {"cat": "nature", "name": "饶州古镇", "lat": 29.01, "lng": 116.7, "desc": "鄱阳县方向\n仿古商业街", "pid": "nature_raozhou"}, {"cat": "nature", "name": "鄱阳湖国家湿地公园", "lat": 29.12, "lng": 116.48, "desc": "自驾约1.5h\n湿地生态 · 夏候鸟", "pid": "nature_poyang"}];
+var photosByPid = {"base_airport": [{"src": "images/D1_airport_01.jpg", "cap": "出发啦，Tilly 坐在行李箱上比耶", "day": "D1", "act": "✈️ CA1887 北京→景德镇罗家机场", "time": "21:00 - 23:10"}, {"src": "images/D1_airport_02.jpg", "cap": "机场里开心到飞起", "day": "D1", "act": "✈️ CA1887 北京→景德镇罗家机场", "time": "21:00 - 23:10"}, {"src": "images/D1_airport_03.jpg", "cap": "推着行李箱的小背影", "day": "D1", "act": "✈️ CA1887 北京→景德镇罗家机场", "time": "21:00 - 23:10"}, {"src": "images/D1_airport_04.jpg", "cap": "候机也不闲着，掏出电脑", "day": "D1", "act": "✈️ CA1887 北京→景德镇罗家机场", "time": "21:00 - 23:10"}, {"src": "images/D1_airport_05.jpg", "cap": "爸爸视角：笑容满分", "day": "D1", "act": "✈️ CA1887 北京→景德镇罗家机场", "time": "21:00 - 23:10"}, {"src": "images/D1_rental_01.jpg", "cap": "提到车啦，Tilly 和日产轩逸的第一张合影", "day": "D1", "act": "🚗 机场取车（日产轩逸）", "time": "23:30"}, {"src": "images/D1_rental_02.jpg", "cap": "Tilly 开心上车", "day": "D1", "act": "🚗 机场取车（日产轩逸）", "time": "23:30"}, {"src": "images/D1_rental_03.jpg", "cap": "我们的白色轩逸，车牌晋 A·6J5G3", "day": "D1", "act": "🚗 机场取车（日产轩逸）", "time": "23:30"}], "hotel_lifeng": [{"src": "images/D1_hotel_01.jpg", "cap": "到酒店啦，Tilly 在房间里吃宵夜", "day": "D1", "act": "🏨 入住：麗枫酒店（陶瓷博物馆陶阳里店）", "time": "00:00"}]};
 var colorMap = { museum:'#6fb1e0', shop:'#ff8c69', kids:'#6fd6c4', food:'#ffc861', nature:'#ffb088', base:'#ffb088', hotel:'#e08ad0' };
+function placePopup(p){
+  var html = '<div class="mp"><b>'+p.name+'</b>';
+  if (p.desc) html += '<div class="mp-desc">'+p.desc.replace(/\n/g,'<br>')+'</div>';
+  var phs = photosByPid[p.pid] || [];
+  if (phs.length){
+    html += '<div class="mp-n">📷 此地点 '+phs.length+' 张照片</div><div class="mp-gal">';
+    phs.forEach(function(ph){
+      html += '<img class="mp-ph" src="'+ph.src+'" alt="'+(ph.cap||'')+'" onclick="openLightbox(this)">';
+    });
+    html += '</div>';
+  } else {
+    html += '<div class="mp-none">📷 暂无照片（待添加）</div>';
+  }
+  html += '</div>';
+  return html;
+}
 var markers = {};
 places.forEach(function(p){
+  var hasPhoto = (photosByPid[p.pid] || []).length > 0;
   var m = L.circleMarker([p.lat, p.lng], {
-    radius: p.cat==='hotel'?10:8, color:'#fff', weight:2,
+    radius: p.cat==='hotel'?10:(hasPhoto?9:7),
+    color: hasPhoto?'#ffb400':'#fff', weight: hasPhoto?3:2,
     fillColor: colorMap[p.cat] || '#999', fillOpacity: 1
   }).addTo(map);
-  m.bindPopup('<b>'+p.name+'</b><br>'+(p.desc||'').replace(/\n/g,'<br>'));
+  m.bindPopup(placePopup(p), { maxWidth: 260 });
   markers[p.cat] = markers[p.cat] || [];
   markers[p.cat].push(m);
 });

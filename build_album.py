@@ -29,6 +29,58 @@ CAT_LABEL = {
     "food": "美食", "nature": "自然/古镇", "base": "交通/基地", "hotel": "酒店",
 }
 
+# 行程点 -> 地图地点 pid 的关联（按关键词匹配，先命中先得）
+EVENT_PID_KEYWORDS = [
+    ("景德镇罗家机场", "base_airport"),
+    ("罗家机场服务点", "base_airport"),
+    ("昌江区瓷都大道1168号", "hotel_lifeng"),
+    ("麗枫", "hotel_lifeng"),
+    ("珠山区广场南路28号", "hotel_jinghan"),
+    ("景瀚", "hotel_jinghan"),
+    ("御窑博物馆", "museum_yuyao"),
+    ("景德镇陶瓷博物馆", "museum_ceramic"),
+    ("陶阳里历史文化旅游区", "museum_yuyao"),
+    ("陶阳新村", "shop_fuzhounight"),
+    ("抚州弄", "food_fuzhou"),
+    ("泥上风土", "food_nishang"),
+    ("小樱青花扎染", "kids_xiaoying"),
+    ("绿西玻璃", "kids_lvxi"),
+    ("胖师傅写真", "kids_pangshifu"),
+    ("陶源谷", "nature_sanbao"),
+    ("三宝", "nature_sanbao"),
+    ("江窑", "kids_jiangyao"),
+    ("雕塑瓷厂", "shop_diaosu"),
+    ("陶溪川", "shop_taoxichuan"),
+    ("一番街烤肉", "food_yifan"),
+    ("古窑民俗博览区", "shop_guyao"),
+    ("新平村瓷宫", "shop_cipalace"),
+    ("瓷宫", "shop_cipalace"),
+    ("江西直升机科技馆", "museum_helicopter"),
+    ("瑶里古镇风景区", "nature_yaoli"),
+    ("瑶里镇", "nature_yaoli"),
+    ("东埠", "nature_dongbu"),
+    ("寒溪", "nature_hanxi"),
+    ("山闾", "shop_shanlv"),
+    ("丙丁柴窑", "shop_bingding"),
+    ("七四O厂", "shop_740"),
+    ("东郊学堂", "shop_dongjiao"),
+    ("鄱阳湖", "nature_poyang"),
+    ("饶州古镇", "nature_raozhou"),
+    ("前程漂流", "kids_qiancheng"),
+    ("花香酒酿", "food_huaxiang"),
+    ("抚州弄大排档", "food_fuzhou_dapaidang"),
+    ("今夕美术馆", "museum_jinxi"),
+    ("民窑博物馆", "museum_minyao"),
+]
+
+
+def event_pid(ev):
+    hay = (ev.get("addr", "") or "") + " " + (ev.get("act", "") or "")
+    for kw, pid in EVENT_PID_KEYWORDS:
+        if kw in hay:
+            return pid
+    return None
+
 TEMPLATE = r"""<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -76,6 +128,17 @@ TEMPLATE = r"""<!DOCTYPE html>
   .filter-bar button { border: 1px solid var(--line); background: #fff; color: var(--muted);
     padding: 6px 13px; border-radius: 18px; font-size: 13px; cursor: pointer; }
   .filter-bar button.active { background: var(--celadon-d); color: #fff; border-color: var(--celadon-d); }
+  .map-tip { font-size: 13px; color: var(--muted); margin: 8px 2px 0; }
+  .map-tip b { color: var(--clay-d); }
+  /* 地图弹窗相册 */
+  .mp { max-width: 250px; }
+  .mp b { font-size: 14px; color: var(--ink); }
+  .mp .mp-desc { font-size: 12px; color: var(--muted); margin: 5px 0 7px; line-height: 1.55; }
+  .mp .mp-n { font-size: 12.5px; color: var(--clay-d); font-weight: 700; margin: 2px 0 5px; }
+  .mp .mp-gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; max-height: 188px; overflow-y: auto; }
+  .mp .mp-ph { width: 100%; height: 62px; object-fit: cover; border-radius: 7px; cursor: pointer; border: 1px solid #eee; background: #f3efe8; }
+  .mp .mp-ph:active { transform: scale(.96); }
+  .mp .mp-none { font-size: 12px; color: var(--muted); margin-top: 4px; }
   /* day */
   .day { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .day-head { background: linear-gradient(90deg, #fdf6ee, #f7ecdf); padding: 13px 18px;
@@ -167,6 +230,7 @@ TEMPLATE = r"""<!DOCTYPE html>
       <span><i class="dot nature"></i>自然/古镇</span>
       <span><i class="dot base"></i>机场/租车</span>
     </div>
+    <div class="map-tip">💡 <b>点金色圆点</b>可看该地点的照片（灰色圆点表示还没拍到）。每天更新照片后，对应的点会自动变成金色。</div>
   </section>
 
   <section>
@@ -201,14 +265,33 @@ L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=
 }).addTo(map);
 
 var places = __PLACES__;
+var photosByPid = __PHOTOSBYID__;
 var colorMap = { museum:'#6fb1e0', shop:'#ff8c69', kids:'#6fd6c4', food:'#ffc861', nature:'#ffb088', base:'#ffb088', hotel:'#e08ad0' };
+function placePopup(p){
+  var html = '<div class="mp"><b>'+p.name+'</b>';
+  if (p.desc) html += '<div class="mp-desc">'+p.desc.replace(/\n/g,'<br>')+'</div>';
+  var phs = photosByPid[p.pid] || [];
+  if (phs.length){
+    html += '<div class="mp-n">📷 此地点 '+phs.length+' 张照片</div><div class="mp-gal">';
+    phs.forEach(function(ph){
+      html += '<img class="mp-ph" src="'+ph.src+'" alt="'+(ph.cap||'')+'" onclick="openLightbox(this)">';
+    });
+    html += '</div>';
+  } else {
+    html += '<div class="mp-none">📷 暂无照片（待添加）</div>';
+  }
+  html += '</div>';
+  return html;
+}
 var markers = {};
 places.forEach(function(p){
+  var hasPhoto = (photosByPid[p.pid] || []).length > 0;
   var m = L.circleMarker([p.lat, p.lng], {
-    radius: p.cat==='hotel'?10:8, color:'#fff', weight:2,
+    radius: p.cat==='hotel'?10:(hasPhoto?9:7),
+    color: hasPhoto?'#ffb400':'#fff', weight: hasPhoto?3:2,
     fillColor: colorMap[p.cat] || '#999', fillOpacity: 1
   }).addTo(map);
-  m.bindPopup('<b>'+p.name+'</b><br>'+(p.desc||'').replace(/\n/g,'<br>'));
+  m.bindPopup(placePopup(p), { maxWidth: 260 });
   markers[p.cat] = markers[p.cat] || [];
   markers[p.cat].push(m);
 });
@@ -285,6 +368,21 @@ def main():
     progress_txt = "已记录 %d/%d 天 · 共 %d 张照片" % (done_days, total_days, total_photos)
     updated = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
 
+    # 构建 地点pid -> 照片列表（用于地图点开看照片）
+    photos_by_pid = {}
+    for d in days:
+        for ev in d["events"]:
+            pid = event_pid(ev)
+            phs = ev.get("photos", [])
+            if pid and phs:
+                photos_by_pid.setdefault(pid, [])
+                for ph in phs:
+                    photos_by_pid[pid].append({
+                        "src": ph["src"],
+                        "cap": ph.get("caption", ""),
+                        "day": d["d"], "act": ev.get("act", ""), "time": ev.get("time", ""),
+                    })
+
     html = (TEMPLATE
             .replace("__TITLE__", meta.get("title", "景德镇亲子游 · 相册"))
             .replace("__SUBTITLE__", meta.get("subtitle", ""))
@@ -296,7 +394,8 @@ def main():
             .replace("__DAYS__", "".join(render_day(d) for d in days))
             .replace("__CENTER__", str(mapdata.get("center", [29.26, 117.20])))
             .replace("__ZOOM__", str(mapdata.get("zoom", 11)))
-            .replace("__PLACES__", json.dumps(places, ensure_ascii=False)))
+            .replace("__PLACES__", json.dumps(places, ensure_ascii=False))
+            .replace("__PHOTOSBYID__", json.dumps(photos_by_pid, ensure_ascii=False)))
 
     out = os.path.join(ROOT, "index.html")
     with open(out, "w", encoding="utf-8") as f:
