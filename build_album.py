@@ -98,6 +98,12 @@ TEMPLATE = r"""<!DOCTYPE html>
   .ev.empty::before { background: var(--muted); box-shadow: 0 0 0 1px var(--muted); }
   .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px; margin-right: 6px;
     background: #e8f7f3; color: #2f9b85; vertical-align: middle; }
+  /* 专属测评 */
+  .ev .stars { color: #ffb400; letter-spacing: 2px; font-size: 14px; margin-left: 6px; vertical-align: middle; }
+  .ev .stars .num { color: var(--muted); font-size: 12px; letter-spacing: 0; margin-left: 4px; }
+  .rating-reason { margin-top: 8px; background: #fff8ec; border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 13px; color: #7a5a2a; line-height: 1.65; }
+  .rating-reason .who { font-weight: 700; color: var(--clay-d); margin-right: 2px; }
   /* photos */
   .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 10px; }
   .gal .ph { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line);
@@ -223,6 +229,13 @@ document.getElementById('filterBar').addEventListener('click', function(e){
 """
 
 
+def render_stars(n):
+    n = max(0, min(5, int(n)))
+    filled = "⭐" * n
+    empty = "☆" * (5 - n)
+    return '<span class="stars" title="%d 星">%s%s<span class="num">%d/5</span></span>' % (n, filled, empty, n)
+
+
 def render_event(ev):
     photos = ev.get("photos", [])
     if ev.get("empty"):
@@ -241,8 +254,11 @@ def render_event(ev):
     tag = ('<span class="tag">%s</span>' % CAT_LABEL.get(ev["cat"], "")) if ev.get("cat") else ""
     note = ('<div class="note">%s</div>' % ev["note"]) if ev.get("note") else ""
     addr = ('<div class="addr">📍 %s</div>' % ev["addr"]) if ev.get("addr") else ""
-    return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s</div>%s%s%s</div>'
-            % (ev.get("time", ""), tag, ev.get("act", ""), addr, note, gal))
+    stars = render_stars(ev["rating"]) if ev.get("rating") is not None else ""
+    rr = ev.get("rating_reason")
+    rr_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
+    return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s%s</div>%s%s%s%s</div>'
+            % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rr_html, gal))
 
 
 def render_day(d):
