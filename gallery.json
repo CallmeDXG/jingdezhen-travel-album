@@ -26,7 +26,7 @@
         { "time": "20:30", "act": "🍽️ 飞机上的晚餐", "addr": "航班 CA1887 上", "cat": "food", "note": "高空的飞机餐，落地前把晚餐解决掉", "photos": [
           { "src": "images/D1_dinner_plane_01.jpg", "caption": "Tilly 在飞机上专注看电影" }
         ] },
-        { "time": "21:30", "act": "🏨 入住：麗枫酒店（陶瓷博物馆陶阳里店）", "addr": "昌江区瓷都大道1168号", "cat": "hotel", "note": "高级大床房 · D1-D3 共3晚", "photos": [
+        { "time": "00:00", "act": "🏨 入住：麗枫酒店（陶瓷博物馆陶阳里店）", "addr": "昌江区瓷都大道1168号", "cat": "hotel", "note": "高级大床房 · D1-D3 共3晚", "photos": [
           { "src": "images/D1_hotel_01.jpg", "caption": "到酒店啦，Tilly 在房间里吃宵夜" }
         ] }
       ]
