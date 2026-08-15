@@ -11,7 +11,13 @@
       "date": "8/15 周五",
       "theme": "落地 · 取车 · 入住麗枫",
       "events": [
-        { "time": "17:30 - 19:40", "act": "✈️ CA1887 北京→景德镇罗家机场", "addr": "景德镇罗家机场", "cat": "base", "note": "落地约晚8点，先取行李", "photos": [] },
+        { "time": "17:30 - 19:40", "act": "✈️ CA1887 北京→景德镇罗家机场", "addr": "景德镇罗家机场", "cat": "base", "note": "落地约晚8点，先取行李", "photos": [
+          { "src": "images/D1_airport_01.jpg", "caption": "出发啦，Tilly 坐在行李箱上比耶" },
+          { "src": "images/D1_airport_02.jpg", "caption": "机场里开心到飞起" },
+          { "src": "images/D1_airport_03.jpg", "caption": "推着行李箱的小背影" },
+          { "src": "images/D1_airport_04.jpg", "caption": "候机也不闲着，掏出电脑" },
+          { "src": "images/D1_airport_05.jpg", "caption": "爸爸视角：笑容满分" }
+        ] },
         { "time": "19:30", "act": "🚗 机场取车（日产轩逸）", "addr": "罗家机场服务点", "cat": "base", "note": "取车点：罗家机场服务点，已订 8/15 19:30 – 8/23 10:00", "photos": [] },
         { "time": "20:30", "act": "🍜 晚餐：抚州弄 / 花香酒酿煮粉", "addr": "抚州弄", "cat": "food", "note": "第一晚别太赶，就近吃碗粉暖胃", "photos": [] },
         { "time": "21:30", "act": "🏨 入住：麗枫酒店（陶瓷博物馆陶阳里店）", "addr": "昌江区瓷都大道1168号", "cat": "hotel", "note": "高级大床房 · D1-D3 共3晚", "photos": [] }
