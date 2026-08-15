@@ -263,10 +263,12 @@ def render_event(ev):
 
 def render_day(d):
     events = "".join(render_event(ev) for ev in d["events"])
+    emoji = d.get("emoji", "")
+    date_label = ("%s %s" % (emoji, d["date"])) if emoji else d["date"]
     return ('<div class="day"><div class="day-head"><span class="d">%s</span>'
             '<span class="date">%s</span><span class="theme">%s</span></div>'
             '<div class="day-body"><div class="tl">%s</div></div></div>'
-            % (d["d"], d["date"], d.get("theme", ""), events))
+            % (d["d"], date_label, d.get("theme", ""), events))
 
 
 def main():
