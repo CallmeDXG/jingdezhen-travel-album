@@ -380,7 +380,7 @@ def render_event(ev):
             rr = ev.get("rating_reason")
             rating_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
         else:
-            rating_html = '<div class="rating-reason pending"><span class="who">🤖 我的专属测评</span>：待评价 ✏️</div>'
+            stars = '<span class="stars" title="待评价">☆☆☆☆☆<span class="num">待评价</span></span>'
     return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s%s</div>%s%s%s%s</div>'
             % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rating_html, gal))
 
