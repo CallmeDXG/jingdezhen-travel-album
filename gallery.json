@@ -44,6 +44,8 @@
           "addr": "景德镇罗家机场",
           "cat": "base",
           "note": "落地约 23:10，先取行李",
+          "rating": 4,
+          "rating_reason": "",
           "photos": [
             {
               "src": "images/D1_airport_01.jpg",
