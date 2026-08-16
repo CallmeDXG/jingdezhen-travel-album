@@ -38,7 +38,6 @@ EVENT_PID_KEYWORDS = [
     ("珠山区广场南路28号", "hotel_jinghan"),
     ("景瀚", "hotel_jinghan"),
     ("御窑博物馆", "museum_yuyao"),
-    ("景德镇陶瓷博物馆", "museum_ceramic"),
     ("陶阳里历史文化旅游区", "museum_yuyao"),
     ("陶阳新村", "shop_fuzhounight"),
     ("抚州弄", "food_fuzhou"),
