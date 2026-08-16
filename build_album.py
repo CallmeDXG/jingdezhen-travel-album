@@ -68,6 +68,7 @@ EVENT_PID_KEYWORDS = [
     ("饶州古镇", "nature_raozhou"),
     ("前程漂流", "kids_qiancheng"),
     ("花香酒酿", "food_huaxiang"),
+    ("小乐川", "food_xiaolechuan"),
     ("抚州弄大排档", "food_fuzhou_dapaidang"),
     ("今夕美术馆", "museum_jinxi"),
     ("民窑博物馆", "museum_minyao"),
