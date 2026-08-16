@@ -164,6 +164,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   /* 专属测评 */
   .ev .stars { color: #ffb400; letter-spacing: 2px; font-size: 14px; margin-left: 6px; vertical-align: middle; }
   .ev .stars .num { color: var(--muted); font-size: 12px; letter-spacing: 0; margin-left: 4px; }
+  .ev .stars.pending { color: #c2c8cd; }
+  .ev .stars.pending .num { color: var(--muted); }
   .rating-reason { margin-top: 8px; background: #fff8ec; border-left: 3px solid var(--gold);
     border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 13px; color: #7a5a2a; line-height: 1.65; }
   .rating-reason .who { font-weight: 700; color: var(--clay-d); margin-right: 2px; }
@@ -183,16 +185,13 @@ TEMPLATE = r"""<!DOCTYPE html>
   #lb img { max-width: 100%; max-height: 82vh; border-radius: 10px; }
   #lb .lb-cap { color: #fff; margin-top: 12px; font-size: 14px; text-align: center; }
   #lb .lb-close { position: absolute; top: 16px; right: 20px; color: #fff; font-size: 30px; cursor: pointer; }
+  #lb .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 52px; cursor: pointer;
+    user-select: none; padding: 0 16px; opacity: .8; line-height: 1; }
+  #lb .lb-nav:hover { opacity: 1; }
+  #lb .lb-prev { left: 2px; }
+  #lb .lb-next { right: 2px; }
   footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
-  /* 封面大图 */
-  .cover-sec { margin-bottom: 26px; }
-  .cover { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
-  .cover img { width: 100%; height: 240px; object-fit: cover; display: block; cursor: pointer; background: #f0e6da; }
-  .cover .cover-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 18px 14px;
-    color: #fff; font-size: 16px; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,.4);
-    background: linear-gradient(transparent, rgba(0,0,0,.55)); }
-  .cover .cover-cap small { display: block; font-weight: 400; font-size: 12.5px; opacity: .9; margin-top: 2px; }
-  @media (max-width: 600px) { .cover img { height: 200px; } }
+  /* 封面大图已移除 */
   /* 旅行总结海报 */
   .poster-sec { margin-top: 4px; }
   .poster { background: linear-gradient(135deg, #ffd6a5 0%, #ffb088 55%, #ff9e7d 100%);
@@ -232,8 +231,6 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="bar"><i style="width:__PCT__%"></i></div>
   <div class="txt">__PROGRESSTXT__ · 最后更新 __UPDATED__</div>
 </div>
-
-__COVER__
 
 <div class="wrap">
 
@@ -279,18 +276,39 @@ __COVER__
 
 <footer>景德镇亲子游相册 · 由攻略自动生成 · 地图数据 © 高德地图</footer>
 
-<div id="lb"><span class="lb-close" onclick="closeLightbox()">×</span><img src="" alt=""><div class="lb-cap"></div></div>
+<div id="lb"><span class="lb-close" onclick="closeLightbox()">×</span><span class="lb-nav lb-prev" onclick="lbNav(-1)">‹</span><img src="" alt=""><div class="lb-cap"></div><span class="lb-nav lb-next" onclick="lbNav(1)">›</span></div>
 
 <script>
+var lbList = [];
+var lbIdx = 0;
 function openLightbox(img){
+  var grid = img.parentElement;
+  lbList = Array.prototype.slice.call(grid.querySelectorAll('img'));
+  lbIdx = lbList.indexOf(img);
+  if (lbIdx < 0) { lbList = [img]; lbIdx = 0; }
+  showLb();
+}
+function showLb(){
   var o = document.getElementById('lb');
-  o.querySelector('img').src = img.src;
-  o.querySelector('img').alt = img.alt;
-  o.querySelector('.lb-cap').textContent = img.alt || '';
+  var im = o.querySelector('img');
+  im.src = lbList[lbIdx].src;
+  im.alt = lbList[lbIdx].alt;
+  o.querySelector('.lb-cap').textContent = lbList[lbIdx].alt || '';
   o.style.display = 'flex';
+}
+function lbNav(d){
+  if (!lbList.length) return;
+  lbIdx = (lbIdx + d + lbList.length) % lbList.length;
+  showLb();
 }
 function closeLightbox(){ document.getElementById('lb').style.display = 'none'; }
 document.getElementById('lb').addEventListener('click', function(e){ if(e.target === this) closeLightbox(); });
+document.addEventListener('keydown', function(e){
+  if (document.getElementById('lb').style.display !== 'flex') return;
+  if (e.key === 'ArrowLeft') { e.preventDefault(); lbNav(-1); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); lbNav(1); }
+  else if (e.key === 'Escape') { closeLightbox(); }
+});
 
 // ===== 地图 =====
 var map = L.map('map', { scrollWheelZoom: true }).setView(__CENTER__, __ZOOM__);
@@ -371,16 +389,14 @@ def render_event(ev):
     tag = ('<span class="tag">%s</span>' % CAT_LABEL.get(ev["cat"], "")) if ev.get("cat") else ""
     note = ('<div class="note">%s</div>' % ev["note"]) if ev.get("note") else ""
     addr = ('<div class="addr">📍 %s</div>' % ev["addr"]) if ev.get("addr") else ""
-    stars = ""
-    rating_html = ""
-    if "rating" in ev:
-        r = ev.get("rating")
-        if r is not None:
-            stars = render_stars(r)
-            rr = ev.get("rating_reason")
-            rating_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
-        else:
-            stars = '<span class="stars" title="待评价">☆☆☆☆☆<span class="num">待评价</span></span>'
+    r = ev.get("rating")
+    if isinstance(r, int):
+        stars = render_stars(r)
+        rr = ev.get("rating_reason")
+        rating_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
+    else:
+        stars = '<span class="stars pending" title="待评价">☆☆☆☆☆<span class="num">待评价</span></span>'
+        rating_html = ""
     return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s%s</div>%s%s%s%s</div>'
             % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rating_html, gal))
 
@@ -450,12 +466,10 @@ def main():
                     })
 
     summary_html = render_summary(data.get("summary", {}), meta.get("dates", ""))
-    cover_html = render_cover(meta.get("cover", ""), meta.get("subtitle", ""))
 
     html = (TEMPLATE
             .replace("__TITLE__", meta.get("title", "景德镇亲子游 · 相册"))
             .replace("__SUBTITLE__", meta.get("subtitle", ""))
-            .replace("__COVER__", cover_html)
             .replace("__DATES__", meta.get("dates", ""))
             .replace("__TRIP__", meta.get("trip", ""))
             .replace("__PCT__", str(pct))
