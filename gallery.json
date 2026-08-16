@@ -279,7 +279,12 @@
           "note": "吃饭+逛小摊，买便宜手工小物件",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D2_fuzhou_01.jpg",
+              "caption": "抚州弄：红豆酒酿豆花冰淇淋"
+            }
+          ]
         },
         {
           "time": "晚",
