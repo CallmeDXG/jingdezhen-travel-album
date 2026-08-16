@@ -75,7 +75,7 @@
           "addr": "罗家机场服务点",
           "cat": "base",
           "note": "取车点：罗家机场服务点，已订 8/15 23:30 – 8/23 10:00",
-          "rating": null,
+          "rating": 5,
           "photos": [
             {
               "src": "images/D1_rental_01.jpg",
