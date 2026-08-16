@@ -94,8 +94,8 @@
           "addr": "航班 CA1887 上",
           "cat": "food",
           "note": "高空的飞机餐，落地前把晚餐解决掉",
-          "rating": 3,
-          "rating_reason": "飞机餐客观来说就那样，别指望多惊艳；但 CA1887 这班晚餐热乎管饱，Tilly 在飞机上吃得香就是满分体验。给 3 星是客观打分，'出发的仪式感'额外加分。",
+          "rating": null,
+          "rating_reason": "",
           "photos": [
             {
               "src": "images/D1_dinner_plane_01.jpg",
@@ -130,8 +130,8 @@
           "addr": "景德镇陶瓷博物馆",
           "cat": "museum",
           "note": "免费 · 周一闭馆，今天周日 OK。闺女看青花、颜色釉",
-          "rating": 5,
-          "rating_reason": "国内最好的陶瓷专题馆，还免费！青花、颜色釉、历代名瓷一次看够，Tilly 眼睛都看亮了。亲子友好、讲解牌清晰，避开周一闭馆就行。景德镇第一站无脑冲。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -140,8 +140,8 @@
           "addr": "泥上风土自然餐厅",
           "cat": "food",
           "note": "本地菜，可要求微辣",
-          "rating": 4,
-          "rating_reason": "本地菜做得干净，环境舒服，适合带娃坐下好好吃顿午饭；可要求微辣，品控稳。扣 1 星是因为比街边小馆贵一些，但整体体验值。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -150,8 +150,8 @@
           "addr": "陶阳里历史文化旅游区",
           "cat": "museum",
           "note": "亲子 · 建筑很出片，逛老作坊遗址；联票约53元",
-          "rating": 5,
-          "rating_reason": "红砖拱形建筑本身就是艺术品，出片率极高；老作坊遗址让 Tilly 看懂'皇家瓷器怎么造'。联票 53 元相当良心，晚上灯光一打更绝。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -160,8 +160,8 @@
           "addr": "抚州弄 / 陶阳新村",
           "cat": "shop",
           "note": "吃饭+逛小摊，买便宜手工小物件",
-          "rating": 4,
-          "rating_reason": "冷粉、牛骨粉、油条包麻糍一路吃过去，便宜又地道；热闹接地气，Tilly 能边逛边尝。扣 1 星是人多略挤、卫生水平参差。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -183,8 +183,8 @@
           "addr": "小樱青花扎染店",
           "cat": "kids",
           "note": "约105元/人，闺女最爱！提前约，确认总价含材料",
-          "rating": 5,
-          "rating_reason": "Tilly 此行最爱之一！自己扎、自己染，成品能带走当纪念。105 元/人含材料不算贵，老师也耐心。记得提前约，别跑空。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -193,8 +193,8 @@
           "addr": "绿西玻璃工作室",
           "cat": "kids",
           "note": "预留约2.5小时（14:00–16:30）：选玻璃料→窑炉熔合/吹制→退火冷却。成品冷却后当场带走",
-          "rating": 5,
-          "rating_reason": "烧玻璃比陶艺更'哇塞'，窑炉熔合那一下 Tilly 直接尖叫。留足 2.5 小时，退火后当场拿，成品闪亮亮的，闺女宝贝得很。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -203,8 +203,8 @@
           "addr": "胖师傅写真馆",
           "cat": "kids",
           "note": "御窑厂附近，闺女穿青花服拍组写真。提前预约，预留1-2小时",
-          "rating": 4,
-          "rating_reason": "青花服一穿，Tilly 秒变小瓷娃，照片能当全家福。妆造+拍摄约 1-2 小时很出片。扣 1 星是要提前约档期，当天的自由度会低一点。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         }
       ],
@@ -221,8 +221,8 @@
           "addr": "陶源谷·三宝国际陶艺村",
           "cat": "nature",
           "note": "免费 · 艺术工作室+小溪+奇怪可爱的小店，周二很多馆闭但村子开放",
-          "rating": 5,
-          "rating_reason": "三宝是景德镇最'松弛'的地方：艺术工作室+小溪+奇怪可爱的小店，免费慢逛。周二馆虽闭但村子开放，带 Tilly 踩水捡石头一下午都不腻。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -230,8 +230,8 @@
           "act": "🍽️ 三宝村内简餐",
           "addr": "三宝村内",
           "cat": "food",
-          "rating": 3,
-          "rating_reason": "村内简餐水平参差，主打'在风景里吃饭'而不是味道。能吃饱、环境加分，但别期待惊艳。建议随便垫一口，正餐留给市区。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -240,8 +240,8 @@
           "addr": "三宝村",
           "cat": "nature",
           "note": "累了就回麗枫拿行李",
-          "rating": 4,
-          "rating_reason": "累了坐下来喝杯咖啡、逛逛手作小店，节奏刚刚好。适合爸爸喘口气、Tilly 挑个小玩意。扣 1 星是部分店溢价偏贵。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -266,8 +266,8 @@
           "addr": "江窑·画瓷·陶艺（老厂店）",
           "cat": "kids",
           "note": "预留一整天：拉坯 + 画青花 + 上釉。成品烧制后邮寄到家，免搬运",
-          "rating": 5,
-          "rating_reason": "一整天拉坯+画青花+上釉，烧好邮寄到家不用搬，太省心。Tilly 亲手做的杯子碗，比任何文创都珍贵。强烈建议预留整块时间。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -275,8 +275,8 @@
           "act": "🍽️ 一番街烤肉（午餐）",
           "addr": "一番街烤肉",
           "cat": "food",
-          "rating": 4,
-          "rating_reason": "画完陶艺累瘫，来顿烤肉回血正合适。肉质不错、氛围热闹。扣 1 星是等位常态，错峰去更爽。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -285,8 +285,8 @@
           "addr": "雕塑瓷厂",
           "cat": "shop",
           "note": "雕塑瓷厂就在附近，画完陶艺路过淘个小杯小碗给闺女",
-          "rating": 4,
-          "rating_reason": "巷子里原创陶瓷又便宜又好玩，给 Tilly 淘个小杯小碗绝了。免费逛。扣 1 星是周末人挤人，工作日去体验更好。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -295,8 +295,8 @@
           "addr": "陶溪川文创街区",
           "cat": "shop",
           "note": "免费 · 画完陶艺顺路傍晚逛，美术馆+画廊+文创市集",
-          "rating": 5,
-          "rating_reason": "傍晚的陶溪川最有氛围：红砖厂房+灯光+市集，免费。今夕美术馆当代展有看头。周五六夜市必赶，年轻人氛围拉满。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -318,8 +318,8 @@
           "addr": "古窑民俗博览区 / 浮梁新平村瓷宫",
           "cat": "shop",
           "note": "看传统柴窑+老师傅拉坯，闺女能看懂「瓷器怎么烧出来」",
-          "rating": 4,
-          "rating_reason": "古窑传统柴窑+老师傅现场拉坯，Tilly 能真看懂'瓷器怎么烧出来'，95 元值；瓷宫 25 元像童话瓷城堡，拍照可爱。两处都值，扣 1 星是古窑略偏景区化。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -328,8 +328,8 @@
           "addr": "江西直升机科技馆",
           "cat": "museum",
           "note": "闺女如果喜欢机械/飞行器会很兴奋，离市区不远",
-          "rating": 4,
-          "rating_reason": "Tilly 若喜欢机械/飞行器会超兴奋，真机展示+科普，离市区不远。扣 1 星是互动项目有限，主要看个新鲜。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -338,8 +338,8 @@
           "addr": "鄱阳湖国家湿地公园",
           "cat": "nature",
           "note": "8月非越冬高峰，夏候鸟+湿地也值得；成行就占一天",
-          "rating": 4,
-          "rating_reason": "8 月虽非越冬高峰，但夏候鸟+湿地也值得，自驾 1.5h 成行就占一天。开阔、凉快、适合放风。扣 1 星是夏天观鸟看点略少。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -361,8 +361,8 @@
           "addr": "瑶里古镇风景区",
           "cat": "nature",
           "note": "免费 · 徽派老屋+小桥流水+古码头，闺女可写生/捡石头",
-          "rating": 5,
-          "rating_reason": "免费！徽派老屋+小桥流水+古码头，商业化低，Tilly 能写生捡石头。距市区 1h，是这趟最'古镇味'的一天。强烈推荐。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -370,8 +370,8 @@
           "act": "🍽️ 瑶里镇内午餐",
           "addr": "瑶里镇",
           "cat": "food",
-          "rating": 3,
-          "rating_reason": "镇里农家菜朴实管饱，土鸡汤、小河鱼有点东西。但选择少、水平看店。给 3 星是'在地感'加分，味道中规中矩。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {
@@ -380,8 +380,8 @@
           "addr": "寒溪村 / 山闾村戏台",
           "cat": "nature",
           "note": "艺术茶园+古戏台，返程顺路",
-          "rating": 4,
-          "rating_reason": "寒溪艺术茶园免费又凉快，山闾古戏台有味道，返程顺路不绕。扣 1 星是纯打卡、停留不久。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         }
       ],
@@ -398,8 +398,8 @@
           "addr": "丙丁柴窑 / 七四O厂 / 东郊学堂",
           "cat": "shop",
           "note": "挑1-2个感兴趣的补打卡，不用全去",
-          "rating": 4,
-          "rating_reason": "丙丁柴窑清水混凝土+光影是摄影圣地，七四O厂老厂文艺，东郊学堂有调性。挑 1-2 个补打卡就够，不用全跑。扣 1 星是部分需预约/偏远。",
+          "rating": null,
+          "rating_reason": "",
           "photos": []
         },
         {

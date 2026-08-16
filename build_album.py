@@ -167,6 +167,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   .rating-reason { margin-top: 8px; background: #fff8ec; border-left: 3px solid var(--gold);
     border-radius: 0 8px 8px 0; padding: 8px 12px; font-size: 13px; color: #7a5a2a; line-height: 1.65; }
   .rating-reason .who { font-weight: 700; color: var(--clay-d); margin-right: 2px; }
+  .rating-reason.pending { background: #f4f6f7; border-left-color: #c7ccd1; color: var(--muted); font-style: italic; }
+  .rating-reason.pending .who { color: #9aa1a8; }
   /* photos */
   .gal { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; margin-top: 10px; }
   .gal .ph { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; border: 1px solid var(--line);
@@ -369,11 +371,18 @@ def render_event(ev):
     tag = ('<span class="tag">%s</span>' % CAT_LABEL.get(ev["cat"], "")) if ev.get("cat") else ""
     note = ('<div class="note">%s</div>' % ev["note"]) if ev.get("note") else ""
     addr = ('<div class="addr">📍 %s</div>' % ev["addr"]) if ev.get("addr") else ""
-    stars = render_stars(ev["rating"]) if ev.get("rating") is not None else ""
-    rr = ev.get("rating_reason")
-    rr_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
+    stars = ""
+    rating_html = ""
+    if "rating" in ev:
+        r = ev.get("rating")
+        if r is not None:
+            stars = render_stars(r)
+            rr = ev.get("rating_reason")
+            rating_html = ('<div class="rating-reason"><span class="who">🤖 我的专属测评</span>：%s</div>' % rr) if rr else ""
+        else:
+            rating_html = '<div class="rating-reason pending"><span class="who">🤖 我的专属测评</span>：待评价 ✏️</div>'
     return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s%s</div>%s%s%s%s</div>'
-            % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rr_html, gal))
+            % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rating_html, gal))
 
 
 def render_cover(src, caption=""):
