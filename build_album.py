@@ -118,7 +118,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     padding-left: 12px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
   h2 .ic { font-size: 21px; }
   /* map */
-  #map { height: 460px; border-radius: 14px; border: 1px solid var(--line); z-index: 1; }
+  #map { height: 460px; border-radius: 14px; border: none; overflow: hidden; z-index: 1; background: #e9eef0; }
   .map-legend { display: flex; flex-wrap: wrap; gap: 10px 16px; margin-top: 12px; font-size: 13px; }
   .map-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .dot { width: 13px; height: 13px; border-radius: 50%; display: inline-block; border: 2px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
@@ -139,6 +139,14 @@ TEMPLATE = r"""<!DOCTYPE html>
   .mp .mp-ph { width: 100%; height: 62px; object-fit: cover; border-radius: 7px; cursor: pointer; border: 1px solid #eee; background: #f3efe8; }
   .mp .mp-ph:active { transform: scale(.96); }
   .mp .mp-none { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  /* 行程总览 */
+  .ov-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 10px; }
+  .ov-card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+    display: flex; gap: 10px; align-items: flex-start; }
+  .ov-card .oemoji { font-size: 22px; flex: 0 0 auto; line-height: 1.2; }
+  .ov-card .od { font-weight: 700; color: var(--clay-d); font-size: 14px; }
+  .ov-card .ometa { font-size: 12px; color: var(--muted); font-weight: 400; margin-left: 4px; }
+  .ov-card .otext { font-size: 13px; color: var(--ink); margin-top: 4px; line-height: 1.55; }
   /* day */
   .day { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 14px; overflow: hidden; }
   .day-head { background: linear-gradient(90deg, #fdf6ee, #f7ecdf); padding: 13px 18px;
@@ -235,6 +243,11 @@ TEMPLATE = r"""<!DOCTYPE html>
 <div class="wrap">
 
   <section>
+    <h2><span class="ic">🧭</span>行程总览 · 9 天去哪玩</h2>
+    <div class="ov-grid">__OVERVIEW__</div>
+  </section>
+
+  <section>
     <h2><span class="ic">🗺️</span>旅行地图 · 标注所有目的地</h2>
     <div class="filter-bar" id="filterBar">
       <button class="active" data-cat="all">全部</button>
@@ -311,7 +324,7 @@ document.addEventListener('keydown', function(e){
 });
 
 // ===== 地图 =====
-var map = L.map('map', { scrollWheelZoom: true }).setView(__CENTER__, __ZOOM__);
+var map = L.map('map', { scrollWheelZoom: false, preferCanvas: true, zoomControl: true }).setView(__CENTER__, __ZOOM__);
 L.tileLayer('https://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {
   maxZoom: 18, attribution: '© 高德地图'
 }).addTo(map);
@@ -426,6 +439,17 @@ def render_summary(s, sub_line=""):
             % (title, sub_line, rows, note))
 
 
+def render_overview(days):
+    cards = ""
+    for d in days:
+        emoji = d.get("emoji", "")
+        cards += ('<div class="ov-card"><div class="oemoji">%s</div><div>'
+                  '<div class="od">%s<span class="ometa">%s</span></div>'
+                  '<div class="otext">%s</div></div></div>'
+                  % (emoji, d["d"], d["date"], d.get("ov", "")))
+    return cards
+
+
 def render_day(d):
     events = "".join(render_event(ev) for ev in d["events"])
     emoji = d.get("emoji", "")
@@ -476,6 +500,7 @@ def main():
             .replace("__PROGRESSTXT__", progress_txt)
             .replace("__UPDATED__", updated)
             .replace("__DAYS__", "".join(render_day(d) for d in days))
+            .replace("__OVERVIEW__", render_overview(days))
             .replace("__SUMMARY__", summary_html)
             .replace("__CENTER__", str(mapdata.get("center", [29.26, 117.20])))
             .replace("__ZOOM__", str(mapdata.get("zoom", 11)))
