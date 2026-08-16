@@ -19,6 +19,29 @@ import os
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 
+def load_cos():
+    """读取 .cos_config.json，若开启则返回 COS 资源基址(末尾带/)，否则返回 None。"""
+    cfg_path = os.path.join(ROOT, ".cos_config.json")
+    if os.path.exists(cfg_path):
+        try:
+            cfg = json.load(open(cfg_path, encoding="utf-8"))
+            if cfg.get("enabled") and cfg.get("cdn_base"):
+                return cfg["cdn_base"].rstrip("/") + "/"
+        except Exception:
+            pass
+    return None
+
+
+COS_PREFIX = load_cos()
+
+
+def cdn_url(src):
+    """本地 src(images/xxx.jpg) 在开启 COS 时改写为国内图床完整链接。"""
+    if COS_PREFIX and isinstance(src, str) and src.startswith("images/"):
+        return COS_PREFIX + src
+    return src
+
+
 def load():
     with open(os.path.join(ROOT, "gallery.json"), encoding="utf-8") as f:
         return json.load(f)
@@ -391,7 +414,7 @@ def render_event(ev):
     cells = ""
     if photos:
         for p in photos:
-            src = p["src"]
+            src = cdn_url(p["src"])
             cap = p.get("caption", "")
             cells += ('<img class="ph" src="%s" alt="%s" onclick="openLightbox(this)" loading="lazy">'
                       % (src, cap))
@@ -483,7 +506,7 @@ def main():
                 photos_by_pid.setdefault(pid, [])
                 for ph in phs:
                     photos_by_pid[pid].append({
-                        "src": ph["src"],
+                        "src": cdn_url(ph["src"]),
                         "cap": ph.get("caption", ""),
                         "day": d["d"], "act": ev.get("act", ""), "time": ev.get("time", ""),
                     })

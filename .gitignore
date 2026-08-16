@@ -1,0 +1,6 @@
+# 腾讯云 COS 密钥配置（含 SecretId/SecretKey，禁止提交到 GitHub）
+.cos_config.json
+
+# Python 缓存
+__pycache__/
+*.pyc
