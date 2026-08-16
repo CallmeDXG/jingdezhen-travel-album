@@ -182,6 +182,15 @@ TEMPLATE = r"""<!DOCTYPE html>
   #lb .lb-cap { color: #fff; margin-top: 12px; font-size: 14px; text-align: center; }
   #lb .lb-close { position: absolute; top: 16px; right: 20px; color: #fff; font-size: 30px; cursor: pointer; }
   footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px; }
+  /* 封面大图 */
+  .cover-sec { margin-bottom: 26px; }
+  .cover { position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+  .cover img { width: 100%; height: 240px; object-fit: cover; display: block; cursor: pointer; background: #f0e6da; }
+  .cover .cover-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px 18px 14px;
+    color: #fff; font-size: 16px; font-weight: 700; text-shadow: 0 1px 4px rgba(0,0,0,.4);
+    background: linear-gradient(transparent, rgba(0,0,0,.55)); }
+  .cover .cover-cap small { display: block; font-weight: 400; font-size: 12.5px; opacity: .9; margin-top: 2px; }
+  @media (max-width: 600px) { .cover img { height: 200px; } }
   /* 旅行总结海报 */
   .poster-sec { margin-top: 4px; }
   .poster { background: linear-gradient(135deg, #ffd6a5 0%, #ffb088 55%, #ff9e7d 100%);
@@ -221,6 +230,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="bar"><i style="width:__PCT__%"></i></div>
   <div class="txt">__PROGRESSTXT__ · 最后更新 __UPDATED__</div>
 </div>
+
+__COVER__
 
 <div class="wrap">
 
@@ -365,6 +376,16 @@ def render_event(ev):
             % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rr_html, gal))
 
 
+def render_cover(src, caption=""):
+    if not src:
+        return ""
+    cap = caption or "我们的景德镇 · 一大一小的旅行"
+    return ('<section class="cover-sec"><div class="cover">'
+            '<img src="%s" alt="封面" onclick="openLightbox(this)">'
+            '<div class="cover-cap">%s<small>👨‍👧 爸爸 &amp; Tilly · 点开看大图</small></div>'
+            '</div></section>' % (src, cap))
+
+
 def render_summary(s, sub_line=""):
     if not s:
         return ""
@@ -420,10 +441,12 @@ def main():
                     })
 
     summary_html = render_summary(data.get("summary", {}), meta.get("dates", ""))
+    cover_html = render_cover(meta.get("cover", ""), meta.get("subtitle", ""))
 
     html = (TEMPLATE
             .replace("__TITLE__", meta.get("title", "景德镇亲子游 · 相册"))
             .replace("__SUBTITLE__", meta.get("subtitle", ""))
+            .replace("__COVER__", cover_html)
             .replace("__DATES__", meta.get("dates", ""))
             .replace("__TRIP__", meta.get("trip", ""))
             .replace("__PCT__", str(pct))
