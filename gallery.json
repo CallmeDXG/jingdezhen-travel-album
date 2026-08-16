@@ -97,7 +97,7 @@
           "addr": "航班 CA1887 上",
           "cat": "food",
           "note": "高空的飞机餐，落地前把晚餐解决掉",
-          "rating": null,
+          "rating": 5,
           "rating_reason": "",
           "photos": [
             {
