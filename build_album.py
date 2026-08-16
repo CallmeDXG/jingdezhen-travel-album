@@ -42,7 +42,6 @@ EVENT_PID_KEYWORDS = [
     ("陶阳里历史文化旅游区", "museum_yuyao"),
     ("陶阳新村", "shop_fuzhounight"),
     ("抚州弄", "food_fuzhou"),
-    ("泥上风土", "food_nishang"),
     ("小樱青花扎染", "kids_xiaoying"),
     ("绿西玻璃", "kids_lvxi"),
     ("胖师傅写真", "kids_pangshifu"),
