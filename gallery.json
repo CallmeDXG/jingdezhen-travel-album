@@ -135,7 +135,16 @@
           "note": "D2 第一顿，老城区本地味道，吃完顺路逛陶阳里",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D2_xiaolechuan_01.jpg",
+              "caption": "小乐川：青花餐具+酸甜排骨+凉拌卷心菜"
+            },
+            {
+              "src": "images/D2_xiaolechuan_02.jpg",
+              "caption": "小乐川：瓷都特色菜+肉丸汤+蒸苹果+陶瓷手串"
+            }
+          ]
         },
         {
           "time": "09:30",
