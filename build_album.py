@@ -67,8 +67,6 @@ EVENT_PID_KEYWORDS = [
     ("小樱青花扎染", "kids_xiaoying"),
     ("绿西玻璃", "kids_lvxi"),
     ("胖师傅写真", "kids_pangshifu"),
-    ("陶源谷", "nature_sanbao"),
-    ("三宝", "nature_sanbao"),
     ("江窑", "kids_jiangyao"),
     ("雕塑瓷厂", "shop_diaosu"),
     ("陶溪川", "shop_taoxichuan"),

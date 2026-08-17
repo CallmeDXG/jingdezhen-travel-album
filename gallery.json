@@ -368,37 +368,8 @@
     {
       "d": "D3",
       "date": "8/17 周一",
-      "theme": "三宝村艺术慢逛",
+      "theme": "三宝村原计划取消 · 仅晚入住麗枫",
       "events": [
-        {
-          "time": "10:00",
-          "act": "🏞️ 三宝国际陶艺村（陶源谷·三宝度假区）",
-          "addr": "陶源谷·三宝国际陶艺村",
-          "cat": "nature",
-          "note": "免费 · 艺术工作室+小溪+奇怪可爱的小店，周二很多馆闭但村子开放",
-          "rating": null,
-          "rating_reason": "",
-          "photos": []
-        },
-        {
-          "time": "12:30",
-          "act": "🍽️ 三宝村内简餐",
-          "addr": "三宝村内",
-          "cat": "food",
-          "rating": null,
-          "rating_reason": "",
-          "photos": []
-        },
-        {
-          "time": "15:00",
-          "act": "☕ 三宝村咖啡/手作小店自由探索",
-          "addr": "三宝村",
-          "cat": "nature",
-          "note": "累了就回麗枫歇着",
-          "rating": null,
-          "rating_reason": "",
-          "photos": []
-        },
         {
           "time": "晚",
           "act": "🏨 入住麗枫酒店（D3晚）",
@@ -411,7 +382,7 @@
         }
       ],
       "emoji": "🌿",
-      "ov": "三宝国际陶艺村慢逛，晚上回麗枫住"
+      "ov": "三宝村上午/下午行程已删，仅晚上回麗枫住"
     },
     {
       "d": "D4",
@@ -884,14 +855,6 @@
         "lng": 117.189,
         "desc": "夜宵大排档\n热闹接地气",
         "pid": "food_fuzhou_dapaidang"
-      },
-      {
-        "cat": "nature",
-        "name": "陶源谷·三宝国际陶艺村",
-        "lat": 29.296,
-        "lng": 117.155,
-        "desc": "三宝村正式名\n艺术工作室聚集地\n免费 · 慢逛拍照",
-        "pid": "nature_sanbao"
       },
       {
         "cat": "nature",
