@@ -413,7 +413,36 @@
           "note": "三宝村片区，歇脚喝茶",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D3_fuqi_sanbao_01.jpg",
+              "caption": "浮器茶楼（三宝村店）：招牌茶饮"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_02.jpg",
+              "caption": "浮器茶楼（三宝村店）：青柠特调奶茶"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_03.jpg",
+              "caption": "Tilly 在浮器茶楼做手工"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_04.jpg",
+              "caption": "浮器茶楼：手工材料与冷泡茶"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_05.jpg",
+              "caption": "完成的缠花发簪"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_06.jpg",
+              "caption": "店内白瓷茶具套组"
+            },
+            {
+              "src": "images/D3_fuqi_sanbao_07.jpg",
+              "caption": "店内青花茶具套组"
+            }
+          ]
         },
         {
           "time": "晚",
