@@ -285,7 +285,24 @@
           "note": "陶阳里片区的茶楼，歇脚喝茶",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D2_fuqi_01.jpg",
+              "caption": "浮器茶楼：Tilly 在茶楼里串珠子"
+            },
+            {
+              "src": "images/D2_fuqi_02.jpg",
+              "caption": "浮器茶楼：挑选手作饰品材料"
+            },
+            {
+              "src": "images/D2_fuqi_03.jpg",
+              "caption": "浮器茶楼：买到的缠花发簪与胸针"
+            },
+            {
+              "src": "images/D2_fuqi_04.jpg",
+              "caption": "浮器茶楼：非遗缠花发饰特写"
+            }
+          ]
         },
         {
           "time": "17:00",
