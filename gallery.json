@@ -378,7 +378,32 @@
           "note": "店名待确认，就在麗枫酒店门口",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D3_xiongdi_01.jpg",
+              "caption": "兄弟记：卤牛肉、无骨鸡爪与蘸料"
+            },
+            {
+              "src": "images/D3_xiongdi_02.jpg",
+              "caption": "兄弟记：瓦罐汤"
+            },
+            {
+              "src": "images/D3_xiongdi_03.jpg",
+              "caption": "兄弟记：卤牛肉拼盘与鸡爪"
+            },
+            {
+              "src": "images/D3_xiongdi_04.jpg",
+              "caption": "兄弟记：切片卤牛肉"
+            },
+            {
+              "src": "images/D3_xiongdi_05.jpg",
+              "caption": "兄弟记：早餐丰盛一桌"
+            },
+            {
+              "src": "images/D3_xiongdi_06.jpg",
+              "caption": "兄弟记：苦槠豆腐（本地特色下饭菜）"
+            }
+          ]
         },
         {
           "time": "15:00",
