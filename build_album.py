@@ -184,7 +184,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   .ev::before { content: ""; position: absolute; left: -19px; top: 18px; width: 11px; height: 11px; border-radius: 50%;
     background: var(--celadon); border: 2px solid #fff; box-shadow: 0 0 0 1px var(--celadon); }
   .ev .t { font-size: 13px; color: var(--muted); font-weight: 600; }
-  .ev .act { font-size: 15px; font-weight: 600; margin: 2px 0; }
+  .ev .act { font-size: 15px; font-weight: 600; margin: 2px 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; }
+  .ev .act-name { flex: 1 1 auto; min-width: 0; }
   .ev .addr { font-size: 12.5px; color: var(--clay-d); margin-top: 3px; }
   .ev .note { font-size: 13px; color: var(--muted); }
   .ev.empty .act { color: var(--muted); font-weight: 400; font-style: italic; }
@@ -192,7 +193,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   .tag { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px; margin-right: 6px;
     background: #e8f7f3; color: #2f9b85; vertical-align: middle; }
   /* 专属测评 */
-  .ev .stars { color: #ffb400; letter-spacing: 2px; font-size: 14px; margin-left: 6px; vertical-align: middle; }
+  .ev .stars { color: #ffb400; letter-spacing: 2px; font-size: 14px; margin-left: 6px; vertical-align: middle; flex: 0 0 auto; white-space: nowrap; }
   .ev .stars .num { color: var(--muted); font-size: 12px; letter-spacing: 0; margin-left: 4px; }
   .ev .stars.pending { color: #c2c8cd; }
   .ev .stars.pending .num { color: var(--muted); }
@@ -432,7 +433,7 @@ def render_event(ev):
     else:
         stars = '<span class="stars pending" title="待评价">☆☆☆☆☆<span class="num">待评价</span></span>'
         rating_html = ""
-    return ('<div class="ev"><div class="t">%s</div><div class="act">%s%s%s</div>%s%s%s%s</div>'
+    return ('<div class="ev"><div class="t">%s</div><div class="act">%s<span class="act-name">%s</span>%s</div>%s%s%s%s</div>'
             % (ev.get("time", ""), tag, ev.get("act", ""), stars, addr, note, rating_html, gal))
 
 
