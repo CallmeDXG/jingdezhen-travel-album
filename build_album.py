@@ -91,6 +91,7 @@ EVENT_PID_KEYWORDS = [
     ("橘子糯米", "shop_juzi"),
     ("浮器茶楼（陶阳里店）", "food_fuqi"),
     ("浮器茶楼", "food_fuqi"),
+    ("兄弟记", "food_xiongdi"),
     ("抚州弄大排档", "food_fuzhou_dapaidang"),
     ("今夕美术馆", "museum_jinxi"),
     ("民窑博物馆", "museum_minyao"),

@@ -659,6 +659,14 @@
         "pid": "hotel_lifeng"
       },
       {
+        "cat": "food",
+        "name": "兄弟记（麗枫酒店门口）",
+        "lat": 29.2693,
+        "lng": 117.172,
+        "desc": "麗枫酒店门口早饭\n店名待确认",
+        "pid": "food_xiongdi"
+      },
+      {
         "cat": "hotel",
         "name": "🏨 景瀚大酒店（陶溪川街区店）",
         "lat": 29.289,
