@@ -452,7 +452,28 @@
           "note": "文创街区·逛小店，坐标待确认",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D3_fantianli_01.jpg",
+              "caption": "梵田里：父女合影"
+            },
+            {
+              "src": "images/D3_fantianli_02.jpg",
+              "caption": "梵田里：温馨抱抱"
+            },
+            {
+              "src": "images/D3_fantianli_03.jpg",
+              "caption": "梵田里：大虾煲"
+            },
+            {
+              "src": "images/D3_fantianli_04.jpg",
+              "caption": "梵田里：金汤泡饭"
+            },
+            {
+              "src": "images/D3_fantianli_05.jpg",
+              "caption": "梵田里：19:01  timestamp"
+            }
+          ]
         },
         {
           "time": "20:30",
