@@ -733,14 +733,6 @@
       },
       {
         "cat": "shop",
-        "name": "陶阳新村夜市",
-        "lat": 29.29,
-        "lng": 117.18,
-        "desc": "夜宵+小摊\n便宜手工小物件",
-        "pid": "shop_fuzhounight"
-      },
-      {
-        "cat": "shop",
         "name": "浮梁县新平村瓷宫",
         "lat": 29.33,
         "lng": 117.15,
@@ -834,14 +826,6 @@
         "lng": 117.42,
         "desc": "夏季玩水好去处\n带替换衣物+防水袋",
         "pid": "kids_qiancheng"
-      },
-      {
-        "cat": "food",
-        "name": "抚州弄",
-        "lat": 29.288,
-        "lng": 117.19,
-        "desc": "本地小吃一条街\n冷粉/牛骨粉/油条包麻糍",
-        "pid": "food_fuzhou"
       },
       {
         "cat": "food",
