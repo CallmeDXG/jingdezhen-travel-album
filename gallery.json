@@ -598,10 +598,31 @@
           "act": "🍜 徐记面馆",
           "addr": "徐记面馆（位置待确认）",
           "cat": "food",
-          "note": "中午简餐",
+          "note": "中午简餐，现炒肉丝拌面",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D4_xuji_01.jpg",
+              "caption": "徐记面馆：现炒肉丝拌面"
+            },
+            {
+              "src": "images/D4_xuji_02.jpg",
+              "caption": "徐记面馆：夹一筷子手擀面"
+            },
+            {
+              "src": "images/D4_xuji_03.jpg",
+              "caption": "徐记面馆：尝尝店里特色吃法"
+            },
+            {
+              "src": "images/D4_xuji_04.jpg",
+              "caption": "徐记面馆：吃面三连拍之一"
+            },
+            {
+              "src": "images/D4_xuji_05.jpg",
+              "caption": "徐记面馆：吃面三连拍之二"
+            }
+          ]
         },
         {
           "time": "14:00",
