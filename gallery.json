@@ -581,7 +581,32 @@
           "note": "约105元/人，闺女最爱！提前约，确认总价含材料",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D4_xiaoying_01.jpg",
+              "caption": "扎染后用清水冲洗布料"
+            },
+            {
+              "src": "images/D4_xiaoying_02.jpg",
+              "caption": "用橡皮筋捆扎蓝染布料"
+            },
+            {
+              "src": "images/D4_xiaoying_03.jpg",
+              "caption": "在院子里接水准备漂洗"
+            },
+            {
+              "src": "images/D4_xiaoying_04.jpg",
+              "caption": "举起刚染好的青花蓝裙子"
+            },
+            {
+              "src": "images/D4_xiaoying_05.jpg",
+              "caption": "笑着展示扎染成品"
+            },
+            {
+              "src": "images/D4_xiaoying_06.jpg",
+              "caption": "看看正反面的蓝白花纹"
+            }
+          ]
         },
         {
           "time": "11:30",
