@@ -65,7 +65,6 @@ EVENT_PID_KEYWORDS = [
     ("陶阳新村", "shop_fuzhounight"),
     ("抚州弄", "food_fuzhou"),
     ("小樱青花扎染", "kids_xiaoying"),
-    ("绿西玻璃", "kids_lvxi"),
     ("胖师傅写真", "kids_pangshifu"),
     ("江窑", "kids_jiangyao"),
     ("雕塑瓷厂", "shop_diaosu"),
