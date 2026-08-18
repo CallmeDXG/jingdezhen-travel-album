@@ -625,6 +625,25 @@
           ]
         },
         {
+          "time": "13:30",
+          "act": "🍨 糖叙糖水铺",
+          "addr": "糖叙糖水铺（位置待确认）",
+          "cat": "food",
+          "note": "下午茶/甜品，抹茶冰淇淋配水果",
+          "rating": null,
+          "rating_reason": "",
+          "photos": [
+            {
+              "src": "images/D4_tangxu_01.jpg",
+              "caption": "糖叙糖水铺：抹茶冰淇淋水果碗"
+            },
+            {
+              "src": "images/D4_tangxu_02.jpg",
+              "caption": "糖叙糖水铺：抹茶冰淇淋甜品"
+            }
+          ]
+        },
+        {
           "time": "14:00",
           "act": "🔥 绿西玻璃工作室 · 烧玻璃体验",
           "addr": "绿西玻璃工作室",
