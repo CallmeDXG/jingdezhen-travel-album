@@ -754,7 +754,48 @@
           "note": "夜宵+小摊，便宜手工小物件",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D4_fuzhounight_01.jpg",
+              "caption": "夜市摊位前挑选陶瓷小摆件"
+            },
+            {
+              "src": "images/D4_fuzhounight_02.jpg",
+              "caption": "蹲下来细看琳琅满目的小饰品"
+            },
+            {
+              "src": "images/D4_fuzhounight_03.jpg",
+              "caption": "夜市人潮涌动，10元7串的招牌很醒目"
+            },
+            {
+              "src": "images/D4_fuzhounight_04.jpg",
+              "caption": "摊位上摆满各色手绘陶瓷杯"
+            },
+            {
+              "src": "images/D4_fuzhounight_05.jpg",
+              "caption": "原创手绘杯碟，折扣价很诱人"
+            },
+            {
+              "src": "images/D4_fuzhounight_06.jpg",
+              "caption": "一盒盒青花图案碗碟整齐排列"
+            },
+            {
+              "src": "images/D4_fuzhounight_07.jpg",
+              "caption": "成套青花小茶杯，价格25元一套"
+            },
+            {
+              "src": "images/D4_fuzhounight_08.jpg",
+              "caption": "可爱的陶瓷小动物摆件堆成小山"
+            },
+            {
+              "src": "images/D4_fuzhounight_09.jpg",
+              "caption": "明星头像图案的陶瓷杯垫/摆件"
+            },
+            {
+              "src": "images/D4_fuzhounight_10.jpg",
+              "caption": "夜市灯光下继续淘宝贝"
+            }
+          ]
         }
       ],
       "emoji": "🎨",
