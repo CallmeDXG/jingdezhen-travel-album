@@ -77,7 +77,8 @@ def upload_one(bucket, region, secret_id, secret_key, key, data):
     host = "%s.cos.%s.myqcloud.com" % (bucket, region)
     enc_key = quote(key, safe="/")
     url = "https://%s/%s" % (host, enc_key)
-    headers = {"Host": host, "Content-Type": "image/jpeg"}
+    headers = {"Host": host, "Content-Type": "image/jpeg",
+               "Cache-Control": "max-age=2592000"}
     auth = sign(secret_id, secret_key, "put", "/" + enc_key, {}, headers)
     headers["Authorization"] = auth
     r = requests.put(url, data=data, headers=headers, timeout=60)
