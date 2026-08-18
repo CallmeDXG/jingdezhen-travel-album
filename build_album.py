@@ -98,6 +98,8 @@ EVENT_PID_KEYWORDS = [
     ("抚州弄大排档", "food_fuzhou_dapaidang"),
     ("今夕美术馆", "museum_jinxi"),
     ("民窑博物馆", "museum_minyao"),
+    ("以琳美学", "kids_yilin"),
+    ("捏捏乐园", "kids_nienie"),
 ]
 
 

@@ -654,6 +654,56 @@
           "photos": []
         },
         {
+          "time": "16:00",
+          "act": "🎨 以琳美学空间 · 青花瓷碎片拼贴",
+          "addr": "以琳美学空间·拼豆·陶艺·手工DIY（御窑厂店）",
+          "cat": "kids",
+          "note": "御窑厂附近，青花瓷碎片拼贴/马赛克瓷画DIY",
+          "rating": null,
+          "rating_reason": "",
+          "photos": [
+            {
+              "src": "images/D4_yilin_01.jpg",
+              "caption": "以琳美学空间：青花瓷碎片拼贴成品"
+            },
+            {
+              "src": "images/D4_yilin_02.jpg",
+              "caption": "以琳美学空间：碎瓷片材料"
+            },
+            {
+              "src": "images/D4_yilin_03.jpg",
+              "caption": "以琳美学空间：店内拉坯/烧窑工作区"
+            }
+          ]
+        },
+        {
+          "time": "18:00",
+          "act": "🤏 捏捏乐园 · 陶艺 DIY",
+          "addr": "捏捏乐园·陶艺烧玻璃（陶溪川店）",
+          "cat": "kids",
+          "note": "陶溪川店，捏陶/手作陶瓷",
+          "rating": null,
+          "rating_reason": "",
+          "photos": [
+            {
+              "src": "images/D4_nienie_01.jpg",
+              "caption": "捏捏乐园：Tilly 在做陶艺小碗"
+            },
+            {
+              "src": "images/D4_nienie_02.jpg",
+              "caption": "捏捏乐园：青苹果造型陶碗上色"
+            },
+            {
+              "src": "images/D4_nienie_03.jpg",
+              "caption": "捏捏乐园：调色盘与碎瓷片材料"
+            },
+            {
+              "src": "images/D4_nienie_04.jpg",
+              "caption": "捏捏乐园：店内陶艺工作区"
+            }
+          ]
+        },
+        {
           "time": "19:00",
           "act": "📸 胖师傅写真馆·妆造（古风写真）",
           "addr": "胖师傅写真馆",
@@ -693,7 +743,7 @@
         }
       ],
       "emoji": "🎨",
-      "ov": "亲子手工日：小樱扎染 / 陶阳里浮器茶楼 / 绿西烧玻璃 / 胖师傅写真，晚间换住晨枫臻品+陶阳新村夜市"
+      "ov": "亲子手工日：小樱扎染 / 陶阳里浮器茶楼 / 绿西烧玻璃 / 以琳美学 / 捏捏乐园 / 胖师傅写真，晚间换住晨枫臻品+陶阳新村夜市"
     },
     {
       "d": "D5",
@@ -1045,6 +1095,22 @@
         "lng": 117.198,
         "desc": "烧玻璃（玻璃熔合/fusing）体验\n做小镜子/挂件/小动物",
         "pid": "kids_lvxi"
+      },
+      {
+        "cat": "kids",
+        "name": "以琳美学空间",
+        "lat": 29.28641,
+        "lng": 117.207459,
+        "desc": "御窑厂店\n青花瓷碎片拼贴 / 陶艺DIY",
+        "pid": "kids_yilin"
+      },
+      {
+        "cat": "kids",
+        "name": "捏捏乐园",
+        "lat": 29.296429,
+        "lng": 117.230686,
+        "desc": "陶溪川店\n陶艺 / 捏陶 / 烧玻璃",
+        "pid": "kids_nienie"
       },
       {
         "cat": "kids",
