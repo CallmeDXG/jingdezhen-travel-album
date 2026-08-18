@@ -594,6 +594,16 @@
           "photos": []
         },
         {
+          "time": "12:30",
+          "act": "🍜 徐记面馆",
+          "addr": "徐记面馆（位置待确认）",
+          "cat": "food",
+          "note": "中午简餐",
+          "rating": null,
+          "rating_reason": "",
+          "photos": []
+        },
+        {
           "time": "14:00",
           "act": "🔥 绿西玻璃工作室 · 烧玻璃体验",
           "addr": "绿西玻璃工作室",
@@ -609,6 +619,16 @@
           "addr": "胖师傅写真馆",
           "cat": "kids",
           "note": "御窑厂附近，闺女穿青花服拍组写真。提前预约，预留1-2小时",
+          "rating": null,
+          "rating_reason": "",
+          "photos": []
+        },
+        {
+          "time": "20:00",
+          "act": "🍜 牛骨粉",
+          "addr": "牛骨粉（位置待确认，可能在抚州弄/夜市）",
+          "cat": "food",
+          "note": "晚上加餐，牛骨粉是景德镇特色",
           "rating": null,
           "rating_reason": "",
           "photos": []
