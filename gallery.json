@@ -620,32 +620,32 @@
         },
         {
           "time": "12:30",
-          "act": "🍜 野炉子",
-          "addr": "野炉子（位置待确认）",
+          "act": "🍜 徐记面馆",
+          "addr": "徐记面馆（位置待确认）",
           "cat": "food",
-          "note": "中午简餐",
+          "note": "中午简餐，现炒肉丝拌面",
           "rating": null,
           "rating_reason": "",
           "photos": [
             {
               "src": "images/D4_xuji_01.jpg",
-              "caption": "野炉子：现炒肉丝拌面"
+              "caption": "徐记面馆：现炒肉丝拌面"
             },
             {
               "src": "images/D4_xuji_02.jpg",
-              "caption": "野炉子：夹一筷子手擀面"
+              "caption": "徐记面馆：夹一筷子手擀面"
             },
             {
               "src": "images/D4_xuji_03.jpg",
-              "caption": "野炉子：尝尝店里特色吃法"
+              "caption": "徐记面馆：尝尝店里特色吃法"
             },
             {
               "src": "images/D4_xuji_04.jpg",
-              "caption": "野炉子：吃面三连拍之一"
+              "caption": "徐记面馆：吃面三连拍之一"
             },
             {
               "src": "images/D4_xuji_05.jpg",
-              "caption": "野炉子：吃面三连拍之二"
+              "caption": "徐记面馆：吃面三连拍之二"
             }
           ]
         },
@@ -818,12 +818,46 @@
         },
         {
           "time": "12:00",
-          "act": "🍽️ 一番街烤肉（午餐）",
-          "addr": "一番街烤肉",
+          "act": "🍜 野炉子",
+          "addr": "野炉子（位置待确认）",
           "cat": "food",
+          "note": "中午正餐",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D5_yeluzi_01.jpg",
+              "caption": "野炉子：肉丸汤"
+            },
+            {
+              "src": "images/D5_yeluzi_02.jpg",
+              "caption": "野炉子：小炒黄牛肉配发糕"
+            },
+            {
+              "src": "images/D5_yeluzi_03.jpg",
+              "caption": "野炉子：排骨瓦罐汤"
+            },
+            {
+              "src": "images/D5_yeluzi_04.jpg",
+              "caption": "野炉子：桂花豆花"
+            },
+            {
+              "src": "images/D5_yeluzi_05.jpg",
+              "caption": "野炉子：蒜蓉空心菜"
+            },
+            {
+              "src": "images/D5_yeluzi_06.jpg",
+              "caption": "野炉子：山楂排骨"
+            },
+            {
+              "src": "images/D5_yeluzi_07.jpg",
+              "caption": "野炉子：Tilly展示手绘猫形瓷件"
+            },
+            {
+              "src": "images/D5_yeluzi_08.jpg",
+              "caption": "野炉子：店内陶瓷架"
+            }
+          ]
         },
         {
           "time": "14:00",
