@@ -620,32 +620,32 @@
         },
         {
           "time": "12:30",
-          "act": "🍜 徐记面馆",
-          "addr": "徐记面馆（位置待确认）",
+          "act": "🍜 野炉子",
+          "addr": "野炉子（位置待确认）",
           "cat": "food",
-          "note": "中午简餐，现炒肉丝拌面",
+          "note": "中午简餐",
           "rating": null,
           "rating_reason": "",
           "photos": [
             {
               "src": "images/D4_xuji_01.jpg",
-              "caption": "徐记面馆：现炒肉丝拌面"
+              "caption": "野炉子：现炒肉丝拌面"
             },
             {
               "src": "images/D4_xuji_02.jpg",
-              "caption": "徐记面馆：夹一筷子手擀面"
+              "caption": "野炉子：夹一筷子手擀面"
             },
             {
               "src": "images/D4_xuji_03.jpg",
-              "caption": "徐记面馆：尝尝店里特色吃法"
+              "caption": "野炉子：尝尝店里特色吃法"
             },
             {
               "src": "images/D4_xuji_04.jpg",
-              "caption": "徐记面馆：吃面三连拍之一"
+              "caption": "野炉子：吃面三连拍之一"
             },
             {
               "src": "images/D4_xuji_05.jpg",
-              "caption": "徐记面馆：吃面三连拍之二"
+              "caption": "野炉子：吃面三连拍之二"
             }
           ]
         },
