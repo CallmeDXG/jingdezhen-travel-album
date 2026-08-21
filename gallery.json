@@ -1142,7 +1142,96 @@
           "note": "晚上大排档，热闹",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D7_lele_01.jpg",
+              "caption": "乐乐大排档：晚餐时光 1"
+            },
+            {
+              "src": "images/D7_lele_02.jpg",
+              "caption": "乐乐大排档：晚餐时光 2"
+            },
+            {
+              "src": "images/D7_lele_03.jpg",
+              "caption": "乐乐大排档：晚餐时光 3"
+            },
+            {
+              "src": "images/D7_lele_04.jpg",
+              "caption": "乐乐大排档：晚餐时光 4"
+            },
+            {
+              "src": "images/D7_lele_05.jpg",
+              "caption": "乐乐大排档：晚餐时光 5"
+            },
+            {
+              "src": "images/D7_lele_06.jpg",
+              "caption": "乐乐大排档：晚餐时光 6"
+            },
+            {
+              "src": "images/D7_lele_07.jpg",
+              "caption": "乐乐大排档：晚餐时光 7"
+            },
+            {
+              "src": "images/D7_lele_08.jpg",
+              "caption": "乐乐大排档：晚餐时光 8"
+            },
+            {
+              "src": "images/D7_lele_09.jpg",
+              "caption": "乐乐大排档：晚餐时光 9"
+            },
+            {
+              "src": "images/D7_lele_10.jpg",
+              "caption": "乐乐大排档：晚餐时光 10"
+            },
+            {
+              "src": "images/D7_lele_11.jpg",
+              "caption": "乐乐大排档：晚餐时光 11"
+            },
+            {
+              "src": "images/D7_lele_12.jpg",
+              "caption": "乐乐大排档：晚餐时光 12"
+            },
+            {
+              "src": "images/D7_lele_13.jpg",
+              "caption": "乐乐大排档：晚餐时光 13"
+            },
+            {
+              "src": "images/D7_lele_14.jpg",
+              "caption": "乐乐大排档：晚餐时光 14"
+            },
+            {
+              "src": "images/D7_lele_15.jpg",
+              "caption": "乐乐大排档：晚餐时光 15"
+            },
+            {
+              "src": "images/D7_lele_16.jpg",
+              "caption": "乐乐大排档：晚餐时光 16"
+            },
+            {
+              "src": "images/D7_lele_17.jpg",
+              "caption": "乐乐大排档：晚餐时光 17"
+            },
+            {
+              "src": "images/D7_lele_18.jpg",
+              "caption": "乐乐大排档：晚餐时光 18"
+            },
+            {
+              "src": "images/D7_lele_19.jpg",
+              "caption": "乐乐大排档：晚餐时光 19"
+            },
+            {
+              "src": "images/D7_lele_20.jpg",
+              "caption": "乐乐大排档：晚餐时光 20"
+            },
+            {
+              "src": "images/D7_lele_21.jpg",
+              "caption": "乐乐大排档：晚餐时光 21"
+            },
+            {
+              "src": "images/D7_lele_22.jpg",
+              "caption": "乐乐大排档：晚餐时光 22"
+            }
+          ]
         }
       ],
       "emoji": "🌊",
@@ -1375,7 +1464,7 @@
       {
         "cat": "shop",
         "name": "橘子糯米 · 循环商店",
-        "lat": 29.2950,
+        "lat": 29.295,
         "lng": 117.2058,
         "desc": "陶阳里·柚子广场\n循环商店 / 文创手作",
         "pid": "shop_juzi"
