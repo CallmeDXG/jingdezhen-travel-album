@@ -998,7 +998,24 @@
           "note": "中午正餐，蒸菜",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D6_wuyuanzhengcai_01.jpg",
+              "caption": "婺源蒸菜馆：葱烧牛蛙/鸡块"
+            },
+            {
+              "src": "images/D6_wuyuanzhengcai_02.jpg",
+              "caption": "婺源蒸菜馆：粉蒸排骨"
+            },
+            {
+              "src": "images/D6_wuyuanzhengcai_03.jpg",
+              "caption": "婺源蒸菜馆：粉蒸肉"
+            },
+            {
+              "src": "images/D6_wuyuanzhengcai_04.jpg",
+              "caption": "婺源蒸菜馆：清炒时蔬"
+            }
+          ]
         },
         {
           "time": "14:00",

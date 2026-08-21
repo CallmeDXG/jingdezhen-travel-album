@@ -101,6 +101,7 @@ EVENT_PID_KEYWORDS = [
     ("捏捏乐园", "kids_nienie"),
     ("瓷来的邂逅", "kids_cilai"),
     ("九集夜市", "shop_jiuji"),
+    ("婺源蒸菜馆", "food_wuyuan"),
 ]
 
 
