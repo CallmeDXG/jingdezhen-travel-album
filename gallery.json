@@ -1102,40 +1102,51 @@
     {
       "d": "D7",
       "date": "8/21 周五",
-      "theme": "瑶里古镇一日游",
+      "theme": "鄱阳湖 · 观鸟一日游",
       "events": [
         {
           "time": "09:00",
-          "act": "🏘️ 瑶里古镇风景区 + 东埠古街古码头",
-          "addr": "瑶里古镇风景区",
+          "act": "🌊 鄱阳湖（上午观光）",
+          "addr": "鄱阳湖国家湿地公园",
           "cat": "nature",
-          "note": "免费 · 徽派老屋+小桥流水+古码头，闺女可写生/捡石头",
+          "note": "上午抵达鄱阳湖，湖景+湿地",
           "rating": null,
           "rating_reason": "",
           "photos": []
         },
         {
           "time": "12:30",
-          "act": "🍽️ 瑶里镇内午餐",
-          "addr": "瑶里镇",
+          "act": "🍜 午餐·面条",
+          "addr": "面条（店名待确认）",
           "cat": "food",
+          "note": "中午简餐，面条",
           "rating": null,
           "rating_reason": "",
           "photos": []
         },
         {
-          "time": "14:30",
-          "act": "🌿 寒溪村（免费，茶园村）/ 山闾村戏台",
-          "addr": "寒溪村 / 山闾村戏台",
+          "time": "15:00",
+          "act": "🦅 鄱阳湖观鸟",
+          "addr": "鄱阳湖观鸟点",
           "cat": "nature",
-          "note": "艺术茶园+古戏台，返程顺路",
+          "note": "下午鄱阳湖观鸟，夏候鸟",
+          "rating": null,
+          "rating_reason": "",
+          "photos": []
+        },
+        {
+          "time": "19:30",
+          "act": "🍽️ 乐乐大排档（晚餐）",
+          "addr": "乐乐大排档（位置待确认）",
+          "cat": "food",
+          "note": "晚上大排档，热闹",
           "rating": null,
           "rating_reason": "",
           "photos": []
         }
       ],
-      "emoji": "🏡",
-      "ov": "瑶里古镇 + 东埠古街一日游"
+      "emoji": "🌊",
+      "ov": "鄱阳湖观光 + 观鸟 + 乐乐大排档，中午面条简餐"
     },
     {
       "d": "D8",
@@ -1306,14 +1317,6 @@
         "pid": "shop_bingding"
       },
       {
-        "cat": "shop",
-        "name": "山闾村戏台",
-        "lat": 29.33,
-        "lng": 117.24,
-        "desc": "古戏台建筑\n瑶里方向顺路",
-        "pid": "shop_shanlv"
-      },
-      {
         "cat": "kids",
         "name": "小樱青花扎染店",
         "lat": 29.295,
@@ -1435,27 +1438,11 @@
       },
       {
         "cat": "nature",
-        "name": "瑶里古镇风景区",
-        "lat": 29.35,
-        "lng": 117.55,
-        "desc": "免费 · 距市区约1h车程\n徽派老屋+小桥流水",
-        "pid": "nature_yaoli"
-      },
-      {
-        "cat": "nature",
-        "name": "瑶里景区东埠古街古码头",
-        "lat": 29.365,
-        "lng": 117.555,
-        "desc": "瑶里配套景点\n古代茶叶运输码头",
-        "pid": "nature_dongbu"
-      },
-      {
-        "cat": "nature",
-        "name": "寒溪村",
-        "lat": 29.32,
-        "lng": 117.22,
-        "desc": "免费 · 艺术茶园村\n凉快安静 · 返程顺路",
-        "pid": "nature_hanxi"
+        "name": "鄱阳湖国家湿地公园",
+        "lat": 29.12,
+        "lng": 116.48,
+        "desc": "8/21 实际成行\n湖景+湿地+观鸟",
+        "pid": "nature_poyang"
       },
       {
         "cat": "nature",
