@@ -1028,7 +1028,24 @@
           "note": "手工店，淘小物件/手作",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D6_cilaidexiehou_01.jpg",
+              "caption": "瓷来的邂逅：手捏粉绿小碗组合"
+            },
+            {
+              "src": "images/D6_cilaidexiehou_02.jpg",
+              "caption": "瓷来的邂逅：手捏小杯子特写"
+            },
+            {
+              "src": "images/D6_cilaidexiehou_03.jpg",
+              "caption": "瓷来的邂逅：手捏陶碗与小杯"
+            },
+            {
+              "src": "images/D6_cilaidexiehou_04.jpg",
+              "caption": "瓷来的邂逅：陶艺作品桌面一角"
+            }
+          ]
         },
         {
           "time": "20:30",
@@ -1038,7 +1055,28 @@
           "note": "夜市+小摊，淘手工小物件",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D6_jiujiyeshi_01.jpg",
+              "caption": "九集夜市：热闹的夜市街道"
+            },
+            {
+              "src": "images/D6_jiujiyeshi_02.jpg",
+              "caption": "九集夜市：人流与摊位灯火"
+            },
+            {
+              "src": "images/D6_jiujiyeshi_03.jpg",
+              "caption": "九集夜市：琳琅满目的陶瓷餐具摊"
+            },
+            {
+              "src": "images/D6_jiujiyeshi_04.jpg",
+              "caption": "九集夜市：Tilly 逛文创摊位"
+            },
+            {
+              "src": "images/D6_jiujiyeshi_05.jpg",
+              "caption": "九集夜市：抹茶味水果麻糍"
+            }
+          ]
         }
       ],
       "emoji": "🏺",

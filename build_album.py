@@ -99,6 +99,8 @@ EVENT_PID_KEYWORDS = [
     ("民窑博物馆", "museum_minyao"),
     ("以琳美学", "kids_yilin"),
     ("捏捏乐园", "kids_nienie"),
+    ("瓷来的邂逅", "kids_cilai"),
+    ("九集夜市", "shop_jiuji"),
 ]
 
 
