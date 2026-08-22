@@ -1444,7 +1444,16 @@
           "note": "中午简餐，现炒肉丝拌面（与 D4 同店）",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D8_xuji_01.jpg",
+              "caption": "徐记面馆：现炒浇头拌面 1"
+            },
+            {
+              "src": "images/D8_xuji_02.jpg",
+              "caption": "徐记面馆：现炒浇头拌面 2"
+            }
+          ]
         },
         {
           "time": "14:00",
