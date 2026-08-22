@@ -1542,7 +1542,68 @@
           "note": "晚上正餐",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D8_shangzuo_01.jpg",
+              "caption": "上座：旋转楼梯与店名招牌"
+            },
+            {
+              "src": "images/D8_shangzuo_02.jpg",
+              "caption": "上座：百香果布丁甜品"
+            },
+            {
+              "src": "images/D8_shangzuo_03.jpg",
+              "caption": "上座：麻辣藕片"
+            },
+            {
+              "src": "images/D8_shangzuo_04.jpg",
+              "caption": "上座：窑鸡开坛"
+            },
+            {
+              "src": "images/D8_shangzuo_05.jpg",
+              "caption": "上座：窑鸡特写"
+            },
+            {
+              "src": "images/D8_shangzuo_06.jpg",
+              "caption": "上座：豆冲烧鸡"
+            },
+            {
+              "src": "images/D8_shangzuo_07.jpg",
+              "caption": "上座：豆冲烧鸡特写"
+            },
+            {
+              "src": "images/D8_shangzuo_08.jpg",
+              "caption": "上座：清炒时蔬"
+            },
+            {
+              "src": "images/D8_shangzuo_09.jpg",
+              "caption": "上座：荷叶叫花鸡"
+            },
+            {
+              "src": "images/D8_shangzuo_10.jpg",
+              "caption": "上座：父女晚餐自拍 1"
+            },
+            {
+              "src": "images/D8_shangzuo_11.jpg",
+              "caption": "上座：父女晚餐自拍 2"
+            },
+            {
+              "src": "images/D8_shangzuo_12.jpg",
+              "caption": "上座：父女晚餐自拍 3"
+            },
+            {
+              "src": "images/D8_shangzuo_13.jpg",
+              "caption": "上座：父女晚餐自拍 4"
+            },
+            {
+              "src": "images/D8_shangzuo_14.jpg",
+              "caption": "上座：父女晚餐自拍 5"
+            },
+            {
+              "src": "images/D8_shangzuo_15.jpg",
+              "caption": "上座：紫薯珍珠冰淇淋"
+            }
+          ]
         },
         {
           "time": "20:00",
