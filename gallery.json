@@ -1025,17 +1025,81 @@
           "note": "柴窑陶瓷工作室，看柴窑怎么烧瓷",
           "rating": null,
           "rating_reason": "",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D6_bingding_01.jpg",
+              "caption": "丙丁柴窑：窑前笑容"
+            },
+            {
+              "src": "images/D6_bingding_02.jpg",
+              "caption": "丙丁柴窑：传统砖窑与窑烟囱"
+            },
+            {
+              "src": "images/D6_bingding_03.jpg",
+              "caption": "丙丁柴窑：混凝土拱廊与楼梯"
+            },
+            {
+              "src": "images/D6_bingding_04.jpg",
+              "caption": "丙丁柴窑：天光洒下旋转楼梯"
+            },
+            {
+              "src": "images/D6_bingding_05.jpg",
+              "caption": "丙丁柴窑：拱形窑体全景"
+            },
+            {
+              "src": "images/D6_bingding_06.jpg",
+              "caption": "丙丁柴窑：走下台阶看窑体"
+            },
+            {
+              "src": "images/D6_bingding_07.jpg",
+              "caption": "丙丁柴窑：走进窑洞隧道"
+            },
+            {
+              "src": "images/D6_bingding_08.jpg",
+              "caption": "丙丁柴窑：窑洞口的光"
+            },
+            {
+              "src": "images/D6_bingding_09.jpg",
+              "caption": "丙丁柴窑：砖砌窑顶与烟囱"
+            }
+          ]
         },
         {
           "time": "16:00",
           "act": "🌊 漂流（没开门，未玩成）",
           "addr": "漂流（位置待确认）",
           "cat": "nature",
-          "note": "当天没开门，没玩成，留到下回",
+          "note": "工作日人太少没开门，没玩成；出来就在路边小溪戏水蹚水（见下一站）",
           "rating": null,
           "rating_reason": "",
           "photos": []
+        },
+        {
+          "time": "16:30",
+          "act": "💧 路边小溪戏水蹚水",
+          "addr": "路边小溪（漂流附近）",
+          "cat": "nature",
+          "note": "漂流没开门，意外收获：清澈小溪+白鹭，Tilly 玩水玩到不想走",
+          "rating": null,
+          "rating_reason": "",
+          "photos": [
+            {
+              "src": "images/D6_xiaoxi_01.jpg",
+              "caption": "小溪戏水：溪滩白鹭"
+            },
+            {
+              "src": "images/D6_xiaoxi_02.jpg",
+              "caption": "小溪戏水：Tilly 下水蹚水"
+            },
+            {
+              "src": "images/D6_xiaoxi_03.jpg",
+              "caption": "小溪戏水：白鹭群飞过山林 1"
+            },
+            {
+              "src": "images/D6_xiaoxi_04.jpg",
+              "caption": "小溪戏水：白鹭群飞过山林 2"
+            }
+          ]
         },
         {
           "time": "18:00",
@@ -1074,6 +1138,10 @@
           "rating_reason": "",
           "photos": [
             {
+              "src": "images/D6_wanxia_01.jpg",
+              "caption": "傍晚：去夜市路上的晚霞"
+            },
+            {
               "src": "images/D6_jiujiyeshi_01.jpg",
               "caption": "九集夜市：热闹的夜市街道"
             },
@@ -1102,14 +1170,14 @@
     {
       "d": "D7",
       "date": "8/21 周五",
-      "theme": "鄱阳湖 · 观鸟一日游",
+      "theme": "睡懒觉 + 鄱阳湖观鸟",
       "events": [
         {
-          "time": "09:00",
-          "act": "🌊 鄱阳湖（上午观光）",
-          "addr": "鄱阳湖国家湿地公园",
-          "cat": "nature",
-          "note": "上午抵达鄱阳湖，湖景+湿地",
+          "time": "上午",
+          "act": "😴 上午睡懒觉，午饭后出发",
+          "addr": "晨枫臻品酒店",
+          "cat": "hotel",
+          "note": "上午在酒店补觉，下午才出发去鄱阳湖",
           "rating": null,
           "rating_reason": "",
           "photos": []
@@ -1130,11 +1198,11 @@
           ]
         },
         {
-          "time": "15:00",
-          "act": "🦅 鄱阳湖观鸟",
+          "time": "14:00",
+          "act": "🌊🦅 鄱阳湖观光 + 观鸟（下午）",
           "addr": "鄱阳湖观鸟点",
           "cat": "nature",
-          "note": "下午鄱阳湖观鸟，夏候鸟",
+          "note": "下午抵达鄱阳湖，湖景湿地 + 夏候鸟观鸟",
           "rating": null,
           "rating_reason": "",
           "photos": [
@@ -1429,12 +1497,12 @@
         }
       ],
       "emoji": "🌊",
-      "ov": "鄱阳湖观光 + 观鸟 + 乐乐大排档，中午面条简餐"
+      "ov": "上午睡懒觉 · 下午鄱阳湖观光观鸟 · 乐乐大排档"
     },
     {
       "d": "D8",
       "date": "8/22 周六",
-      "theme": "徐记面馆 + 直升机科技馆 + 上座 + 唐王周毅艺术馆",
+      "theme": "徐记面馆 + 直升机科技馆 + 上座",
       "events": [
         {
           "time": "12:00",
@@ -1606,16 +1674,6 @@
           ]
         },
         {
-          "time": "20:00",
-          "act": "🍬 唐王周毅艺术馆 · 翻糖艺术品展览",
-          "addr": "唐王周毅艺术馆（位置待确认）",
-          "cat": "museum",
-          "note": "翻糖（fondant）艺术展，糖塑/糖花等精致手作艺术品",
-          "rating": null,
-          "rating_reason": "",
-          "photos": []
-        },
-        {
           "time": "21:30",
           "act": "🧳 回酒店整理行李 + 闺女手工作品打包",
           "addr": "晨枫臻品酒店（陶溪川文创街区雕塑瓷厂店）",
@@ -1627,7 +1685,7 @@
         }
       ],
       "emoji": "🚁",
-      "ov": "徐记面馆午餐 + 直升机科技馆 + 上座晚餐 + 唐王周毅翻糖艺术馆，晚回酒店打包手工作品"
+      "ov": "徐记面馆午餐 · 直升机科技馆 · 上座晚餐 · 回酒店打包"
     },
     {
       "d": "D9",
