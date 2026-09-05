@@ -1640,7 +1640,12 @@
           "addr": "罗家机场服务点",
           "cat": "base",
           "note": "租期到 8/23 10:00，别超时",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D9_returncar_01.jpg",
+              "caption": "还车前：轩逸仪表盘（总里程 12632km）"
+            }
+          ]
         },
         {
           "time": "10:35",
@@ -1648,7 +1653,40 @@
           "addr": "景德镇罗家机场",
           "cat": "base",
           "note": "落地北京 12:45",
-          "photos": []
+          "photos": [
+            {
+              "src": "images/D9_flight_01.jpg",
+              "caption": "返程候机：父女候机厅搞怪自拍"
+            },
+            {
+              "src": "images/D9_flight_02.jpg",
+              "caption": "返程登机：舱内父女合影"
+            },
+            {
+              "src": "images/D9_flight_03.jpg",
+              "caption": "返程飞行：机翼与云海"
+            },
+            {
+              "src": "images/D9_flight_04.jpg",
+              "caption": "返程飞行：高空俯瞰河流与城市"
+            },
+            {
+              "src": "images/D9_flight_05.jpg",
+              "caption": "景德镇罗家机场：出发登机口"
+            },
+            {
+              "src": "images/D9_flight_06.jpg",
+              "caption": "返程候机：父女合影 2"
+            },
+            {
+              "src": "images/D9_flight_07.jpg",
+              "caption": "返程候机：父女合影 3"
+            },
+            {
+              "src": "images/D9_flight_08.jpg",
+              "caption": "返程候机：父女合影 4"
+            }
+          ]
         }
       ],
       "emoji": "🛫",
